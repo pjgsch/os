@@ -1,0 +1,10 @@
+
+The Linux Documentation Project
+  https://tldp.org/index.html
+  https://tldp.org/
+    
+Running X
+  https://tldp.org/HOWTO/XWindow-User-HOWTO/runningx.html
+    
+The X Window User HOWTO
+  https://tldp.org/HOWTO/XWindow-User-HOWTO/index.html
