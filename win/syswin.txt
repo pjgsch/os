@@ -65,6 +65,7 @@ Fix Copy/Paste
 
 Hardware check
   https://www.partitionwizard.com/partitionmanager/pc-hardware-check.html
+  https://devicetests.com/
 
 Test CPU
   https://techguided.com/best-tools-to-stress-test-p-cpu-ram-gpu
@@ -87,7 +88,7 @@ Start > Settings > Update & Security > Activation
 
 # Password
 ======================================================================
-in Linux :
+Reset password in Linux :
 
 cd WINDOWS/system32/config/ > sudo chntpw SAM > select
 ----------------------------------------------------------------------

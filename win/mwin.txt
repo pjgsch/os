@@ -1,90 +1,114 @@
+######################################################################
+Onderstaande commando's kunnen worden gegeven in de Run-Dialog-Box
+(starten met [Win+R]) of in een Command Prompt.
+
+Een aantal commando's eist Admin rechten en vraagt om het wachtwoord.
+
+Commando's kunnen ook in een Shortcut worden omgezet.
+
+======================================================================
+Windows 7, 10, 11 might differ
+
 Alltasks                C:\Windows\explorer.exe shell:::{ED7BA470-8E54-465E-825C-99712043E01C}
+Accessibility Options   control access
 Action Center           "C:\ProgramData\Microsoft\Windows\Start Menu\Programs\Administrative Tools"
 Administrative Tools    control admintools
-Backup and Restore [A]  sdclt.exe | control.exe /name Microsoft.BackupAndRestore
+Backup & Restore [A]    sdclt.exe | control.exe /name Microsoft.BackupAndRestore
 Bluetooth               fsquirt.exe
 Boot Configuration      bcdedit  |  bootcfg
 Calculator              calc.exe
+Certificate Manager     cdrtmgr.msc | certmgr.msc
 Character Map           charmap.exe
 Cleanup                 cleanmgr.exe
+Color Management        color.cpl | control color
 Command Prompt          cmd.exe
 Compare two files       fc
 Compare two file sets   comp
+Component Services      comexp.msc
 Computer                %windir%\explorer
 Computer Management     compmgmt.msc
 Control Panel           control.exe  |  shell:ControlPanelFolder
 Defragmentation         defrag.exe /? (start service first)  |  dfrg.msc
 Device Management       devmgmt.msc
+Directory & File Tree   tree
 Disk Management [A]     diskmgmt.msc
 Disk Space              freedisk
 Disk Usage in Dir       diskuse  |  diruse
 DISM                    dism.exe /Online /Cleanup-Image /CheckHealth
 Display Properties      desk.cpl  |  control desktop
-Driver List             driverquery
-Driver Verifier         verifier
+Driver List             driverquery /v /fo csv > drivers.csv
+Driver Verifier         verifier.exe
 Event Viewer            eventvwr.exe
-Findfast                findfast.cpl
+Findfast                findfast.cpl | control findfast.cpl
 Firewall                firewall.cpl
-Internet Properties     inetcpl.cpl
+Folder Properties       control folders
+Internet Properties     inetcpl.cpl | control inetcpl.cpl
 Keyboard Properties     control keyboard
 Kill Process            pskill
 Kill Tasks              taskkill /F /IM <progname>
+List Installed Software wmic PRODUCT
 Local Security Settings secpol.msc
 Local Users & Groups    lusrmgr.msc
 Log off User            logoff
 Magnifier               Magnify.exe
-Malicious Sftwr Remov   mrt
+Malicious Sftwr Remov   mrt.exe
 Memory Test             mdsched.exe
 Memory Usage            mem
+Microsoft Mgmt Console  mmc
 MSConfig [A]            msconfig.exe
 Mouse                   main.cpl  |  control mouse
 Network Connections     control netconnections  |  ncpa.cpl
 Network Info            ipconfig | tracert | ping | pathping | arp -a | netstat | nslookup
+Network Properties      netcpl.cpl
 Network Resources       net
-Network Setup Wzrd      netsetup.cpl
+Network Setup Wzrd      netsetup.cpl | control netcpl.cpl 
 Notepad                 notepad.exe
 Onscreen Keyboard       osk.exe
 Open File List          openfiles
-Optional Features [A]   OptionalFeatures.exe
-Password Properties     password.cpl
+Optional Features [A]   optionalfeatures.exe
+Password Properties     password.cpl | control password.cpl
 Performance Monitor     permon.exe  |  perfmon.msc
 Permissions of files    cacls  |  subinacl
-Power                   powercfg.exe -l  |  powercfg.cpl
-Printers & Faxes        control printers  |  printers  |  shell:PrintersFolder
+Power                   powercfg.exe -l | powercfg.cpl | control powercfg.cpl
+Printers & Faxes        control printers | printers | shell:PrintersFolder
 Print queue             lpq
 Programs and Features   control /name Microsoft.ProgramsAndFeatures
 Programs                appwiz.cpl
 RAM Memory              Computer > System Properties
 RAM Memory              wmic memphysical get MaxCapacity /format:list
-Registry Editor         regedit
+Regional Settings       cntrol intl.cpl
+Registry Editor         regedit | regedit32
 Removable Storage       ntmsmgr.msc
 Resource Monitor [A]    perfmon.exe /res
-Scanners & Cameras      sticpl.cpl
-Scheduled Tasks         control schedtasks
+Scanners & Cameras      sticpl.cpl | control sticpl.cpl
+Scheduled Tasks         control schedtasks | schtasks /?
 Security Center         wscui.cpl
-Services                services.msc
+Services                services.msc | srvmgr.cpl
 SFC Scan                sfc [ /verifyonly | /scannow ]
 Show Drives             wmic logicaldisk get filesystem,caption,drivetype,size,freespace,name,volumename
 Shut Down               shutdown  |  psshutdown
 Storage                 Settings > System > Storage > Storage sense => Configure Storage Sense > clean now
 Sounds & Audio          mmsys.cpl
-System Configuration    sysedit  |  msconfig
+System Configuration    sysedit | msconfig
 Sys Prop Protection [A] SystemPropertiesProtection.exe
 System Info             msinfo32.exe
-System Properties [A]   sysdm.cpl
+System Properties [A]   sysdm.cpl | control sysdm.cpl
 System Restore          rstrui.exe
 Task List               tasklist | more
 Task Manager            taskmgr.exe
 Task Schedular          taskschd.msc
-Time and Date           timedate.cpl
-Users [A]               Netplwiz.exe
+Time and Date           timedate.cpl | control timedate.cpl
+Users Accounts [A]      netplwiz.exe
 User Account Mgr        nusrmgr.cpl
 Usernames & Passwords   cmdkey
 Utility Manager         utilman.exe
 Windows Installer       msiexec
-Windows Version         winver.exe  |  wmic os get version
+Windows Version         ver | winver.exe  |  wmic os get version
 Windows Update          control update  |  ms-settings:windowsupdate
 Wordpad                 "%ProgramFiles%\Windows NT\Accessories\wordpad.exe"
+
+======================================================================
+Hotkeys voor Windows
 
 Hotkey [Win]            Start
 Hotkey [Win+E]          File Explorer
@@ -97,6 +121,11 @@ Hotkey [Win+X]          Start Context Menu
 Hotkey [Ctrl+Shift+Esc] Task Manager
 Hotkey [Win+Pause]      Control Panel
 Hotkey [Win+U]          Ease of Access
+HotKey [Win+Break]      System Properties
+Hotkey [Win+Pause+Break]Perfoemance
+
+======================================================================
+Directories voor Windows
 
 Dir: SendTo             shell:SendTo  |  C:\Users\piet\AppData\Roaming\Microsoft\Windows\SendTo
 Dir: Startup            shell:Common Startup
@@ -106,5 +135,14 @@ Dir: History            shell:History
 Dir: Screenshots        shell:Screenshots
 Dir: System             shell:System
 
+======================================================================
+Websites
+
 Web: commands           https://www.webnots.com/200-run-commands-for-windows-10/
+Web: commands           https://www.windows-commandline.com/cmd-commands/
 Web: Settings           https://ss64.com/nt/syntax-settings.html
+Web: Tools              https://learn.microsoft.com/en-us/sysinternals/
+Web: Documentation      https://learn.microsoft.com/en-us/docs/
+
+======================================================================
+######################################################################

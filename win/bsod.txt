@@ -1,7 +1,17 @@
+######################################################################
 ======================================================================
+BSoD = Blue Screen of Dead
+Windows analyseert de fout en geeft een foutcode op het BSoD.
+Die kan alleen goed bekeken worden als Windows niet automatisch opnieuw 
+opstart
 
-========== Error message
-what is the error message in BSOD-screem?
+Hieronder staan een aantal opties die gevolgd kunnen worden bij BSoD.
+Het is een samenvatting van een aantal webpagina's, waarvan de
+links onderaan deze pagina staan.
+De samenvatting is in het Engels, aangezien het overgrote deel van de 
+internetpagina's in die taal verschijnt.
+
+======================================================================
 
 ========== Windows last change
 cmd.exe ->
@@ -87,7 +97,7 @@ Restart
 
 ======================================================================
 
-========== Sfc scan
+========== Sfc scan (System File Checker)
 [Win+x] > Windows Terminal (Admin)
 OR
 cmd.exe as Admin 
@@ -96,7 +106,7 @@ sfc /verifyonly  -->  computer is scanned
 sfc /scannow     -->  computer is scanned and issues are fixed
 Restart
 
-========== DISM scan
+========== DISM scan (Deployment Image Servicing and Management)
 [Win+x] > Windows Terminal (Admin)
 dism.exe /online /Cleanup-Image /CheckHealth
 dism.exe /online /Cleanup-Image /ScanHealth
@@ -154,6 +164,7 @@ systemreset -cleanpc
 
 ======================================================================
 
+========== Websites on BSoD
 https://www.stellarinfo.com/article/fix-windows-11-bsod-black-screen-of-death.php
 https://windowsreport.com/fix-bsod-windows-11/
 https://www.windowscentral.com/software-apps/windows-11/how-to-fix-blue-screen-of-death-errors-on-windows-11
@@ -161,10 +172,12 @@ https://www.minitool.com/data-recovery/troubleshoot-windows-11-blue-screen-error
 https://www.ubackup.com/windows-11/blue-screen-windows-11.html
 https://support.microsoft.com/en-us/windows/start-your-pc-in-safe-mode-in-windows-92c27cff-db89-8644-1ce4-b3e5e56fe234
 
+========== Websites on 'kmode-exception-not-handled'
 https://www.groovypost.com/howto/fix-kmode-exception-not-handled-on-windows-11/
 https://appuals.com/fix-kmode-exception-not-handled/
 https://windowsreport.com/windows-11-error-kmode-exception-not-handled/
 https://recoverit.wondershare.com/computer-problems/fix-kmode-exception-not-handled-error.html
+
   Disable fast startup
   Update faulty drivers
   Uninstall faulty software
@@ -173,4 +186,5 @@ https://recoverit.wondershare.com/computer-problems/fix-kmode-exception-not-hand
   Disable early launch anti-malware protection
   Check for malware
 
-https://devicetests.com/
+======================================================================
+######################################################################

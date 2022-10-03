@@ -1,0 +1,36 @@
+######################################################################
+
+Portable Apps zijn programma's voor Windows, die gedowload worden en
+dan direkt gebruikt kunnen worden zonder dat ze hoeven te worden
+geinstalleerd.
+Ze werken ook vanaf een USB stick.
+
+Enkele websites voor Portable Apps:
+
+https://portableapps.com/
+https://portapps.io/
+https://pendriveapps.com/
+
+Handige Portable Apps zijn:
+
+7-ZipPortable                   archivering en encryptie
+brave-portable                  webbrowser met hoge security
+CCleaner591                     opruimen op de computer
+doublecmd                       filemanager, 2 panels
+duplicate_finder_win9x.exe      duplicaten vinden
+FileZillaPortable               ftp programma
+FirefoxPortable                 webbrowser
+FreeCommanderPortable           filemanager, 2 panels
+Ghostscript                     conversie voor postscript en pdf
+Imagemagick                     conversie voor vele file types
+MoveInactiveWin.exe             window verplaatsen met [Alt] toets
+Notepad++Portable               ascii editor
+ProcessExplorer                 processen bekijken
+ProcessMonitor                  processen bekijken
+SciTE                           ascii editor
+SumatraPDFPortable              pdf viewer
+TeamViewerPortable              computer delen op afstand
+VLCPortable                     audio, video, streaming
+WinWGetPortable                 wget tool
+
+######################################################################
