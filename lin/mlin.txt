@@ -1,0 +1,89 @@
+######################################################################
+Onderstaande commando's kunnen worden gegeven in de Bash shell.
+
+Een aantal commando's eist Admin rechten en kunnen worden uitgevoerd
+met 'sudo'.
+Als het een GUI betreft moet er vooraf toestemming worden gegeven
+voor het door 'sudo' openen van een grafische interface: "xhost +".
+
+Om een commando in background te runnen moet het worden afgesloten
+met "&".
+
+Commando's kunnen ook in een Launcher worden gezet.
+
+Let op: de commando's kunnen verschillend zijn in de diverse Linux
+varianten.
+
+======================================================================
+Linux-Mint with Mate Desktop
+
+Appearance              mate-appearance-properties %F            
+Bluetooth               blueberry
+Calculator              gnome-calculator
+Character Map           gucharmap 
+Compare two files       cmp | diff
+Computer                caja
+Desktop Settings        mintdesktop
+Disk Usage              mate-disk-usage-analyzer 
+Disk Usage              du -a --exclude=.nx --exclude=.dbus $HOME | sort -n -r | head -n 20
+Disk Usage in Dir       du -a
+Disk Info               gnome-disks
+Displays                mate-display-properties
+Driver Manager          pkexec driver-manager
+Environment Variables   env | printenv 
+File Browser            /usr/bin/caja --no-desktop --browse
+Firewall Configuration  gufw
+Ghostview               gs
+GParted                 /usr/sbin/gparted %f
+Input Method            mintlocale-im
+Keyboard                mate-keyboard-properties
+Keyboard Shortcuts      mate-keybinding-properties
+Kill Window             xkill
+Languages               mintlocale
+List Installed Software compgen -c
+Log File Viewer         mate-system-log
+Main Menu               mozo
+Memory Usage            free -m | vmstat 
+Mouse                   mate-mouse-properties
+Network Info            ifconfig | traceroute | ping | arp -a | netstat | nslookup
+Network Connection      nmcli con
+Network Configuration   nm-connection-editor
+Onscreen Keyboard       onboard
+Password                passwd
+Power Management        mate-power-preferences
+Power Statistics        mate-power-statistics
+Preferred Applications  mate-default-applications-properties
+Printers                system-config-printer
+Process Viewer          ps | top | itop | atop | pmap -d <PID>
+Screen Saver            mate-screensaver-preferences
+Settings manager        ccsm
+Search Tool             mate-search-tool
+Services                service --status-all
+Shut Down               halt | reboor | shutdown -h now
+Software Manager        mintinstall
+Software Sources        pkexec mintsources
+Synaptic Package Mgr    synaptic-pkexec
+System Monitor          mate-system-monitor
+System Reports          mintreport
+System Information      sudo dmidecode
+Sound                   mate-volume-control
+Startup Applications    mate-session-properties
+Take Screenshot         mate-screenshot --interactive
+Terminal                mate-terminal
+Time & Date             time-admin | date MMDDhhmmYY ; clock -w
+Update Manager          mintupdate
+Users and Groups        users-admin | groups 
+Version                 uname -a | arch 
+Windows                 mate-window-properties
+Windows Info            xwininfo
+
+======================================================================
+Hotkeys voor Linux Mint
+
+Hotkey [Alt+F2]         Run Application
+Hotkey [Alt+F1]         Main Menu
+Hotkey [Print]          Take Screenshot
+Hotkey [Ctrl+Alt+T]     Terminal
+Hotkey [Ctrl+Alt+L]     Lock Screen
+
+######################################################################
