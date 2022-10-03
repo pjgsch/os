@@ -1,3 +1,17 @@
+######################################################################
+======================================================================
+Websites
+
 Android voor beginners
   https://www.androidplanet.nl/thema/android-beginnersgids/
-  
+
+Mail op tablet en smartphone | SeniorWeb
+  https://www.seniorweb.nl/onderwerp/mail-op-tablet-en-smartphone
+
+Controleer 4G mogelijkheid toestel
+  https://mijn-bestelling.kpn.com/simwissel/toestelcheck/
+
+Simulatie van iPhone
+  https://runthatapp.com/
+
+######################################################################
