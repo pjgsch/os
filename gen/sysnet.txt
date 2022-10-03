@@ -1,6 +1,10 @@
-##====================================================================
-##= netcom.txt      : commands for networking
+######################################################################
+
+commands for networking
+
 ======================================================================
+Abbreviations
+
 AES    much better than TKIP
 AP     Access Point (router)
 ARP    Address Resolution Protocol (packet) FF:FF:FF:FF:FF:FF ; 64 B
@@ -79,7 +83,7 @@ cat /proc/net/arp
 /sbin/ifconfig eth0 xxx.xxx.xxx.xxx netmask 255.255.255.0 broadcast xxx.xxx.xxx.255   # change IP address
 
 ======================================================================
-Linux Wifi
+Linux/Windows Wifi
 
 lin:  /sbin/arp                                  # detect router
 lin:  sudo iwlist wlan0 scanning | grep -A 7 Cell     # search access point
@@ -116,10 +120,9 @@ win:  "%APPSDIR%\CurrPorts\CurrPorts.exe"                   # list open ports
 win:  "%APPSDIR%\Smartsniff\x86\smsniff.exe"                # port sniffer
 win:  "%APPSDIR%\Socketsniff\SocketSniff.exe"               # port sniffer
 
-www/tinyurl.com/macspoofer
-john (the ripper) | aircrack-ng
 ======================================================================
 ifconfig wlan0 down                    # disable interface wlan0
 ifconfig hw ether xx:xx:xx:xx:xx:xx    # change MAC address
 ifconfig wlan0 up                      # start interface wlan0
 ======================================================================
+######################################################################

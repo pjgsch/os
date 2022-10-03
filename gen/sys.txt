@@ -1,6 +1,12 @@
-**********************************************************************
-##====================================================================
-##= sys.txt         : information on computer systems and commands
+######################################################################
+
+Information on computer systems and commands.
+
+It is a chaotic collection of commands for Windows and Linux OSes
+collected over many years.
+I should clean it up some time, as much things are obsolete.
+
+======================================================================
 
 help         boot 
 
@@ -1953,7 +1959,6 @@ floola          :  ipod server                   <= Floola-win.zip              
 gmer.exe        :                                                                 <= www.gmer.net/files.php
 gnumeric        :  spread sheet                                                    = projects.gnome.org/gnumeric/
 K-Lite          :  Codec Pack                                                     <= http://codecpack.nl/klcodec.htm
-K-Lite          :  Codec Pack                                                     <= www.codecguide.com/download_kl.htm
 LogiFlash       :                                                                  = ct-softlink 0903030
 memorymonitor   :  memory monitor                                                  = www.mkn-software.de/en/software
 net speed       :  net speed                      =                                = www.speedtest.net
@@ -2414,4 +2419,4 @@ Reboot (remove USB!) -> GRUB menu ; if not : proceed
 BIOS: enable Boot Menu
 BIOS: change boot order
 Reboot 
-**********************************************************************
+######################################################################
