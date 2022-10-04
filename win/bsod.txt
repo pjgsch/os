@@ -46,6 +46,9 @@ Boot -> Boot options > uncheck Safe boot
 System and Seurity > System > Advanced system settings
 Settings > System failure section > uncheck Automatically restart > ok
 
+sysdm.cpl => System Properties > Advanced tab > Startup & Recovery: Settings
+Startup & Recovery : System Failure > uncheck Automatic restart
+
 ======================================================================
 
 ========== Disk space
