@@ -125,4 +125,10 @@ ifconfig wlan0 down                    # disable interface wlan0
 ifconfig hw ether xx:xx:xx:xx:xx:xx    # change MAC address
 ifconfig wlan0 up                      # start interface wlan0
 ======================================================================
+Websites
+
+Networking commands
+  https://cromwell-intl.com/networking/commands.html
+
+
 ######################################################################
