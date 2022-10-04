@@ -167,6 +167,9 @@ systemreset -cleanpc
 
 ======================================================================
 
+========== Log file
+https://www.makeuseof.com/windows-bsod-log-file-location/
+
 ========== Websites on BSoD
 https://www.stellarinfo.com/article/fix-windows-11-bsod-black-screen-of-death.php
 https://windowsreport.com/fix-bsod-windows-11/
