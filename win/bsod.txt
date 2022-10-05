@@ -18,6 +18,15 @@ cmd.exe ->
 systeminfo | findstr /C:"Install Date"
 
 ======================================================================
+========== Search issues
+
+eventvwr.exe => see link 
+
+control.exe 
+=> System and Security => Security and Maintenance
+=> Maintenance => View reliability history
+
+======================================================================
 
 ========== Safe mode from dead system
 Reboot PC
