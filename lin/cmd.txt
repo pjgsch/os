@@ -1,0 +1,205 @@
+======================================================================
+======================================================================
+Download files
+
+wget https://$SITE/$PATHTOFILE/$FILE
+wget -O $NEWFILENAME https://$SITE/$PATHTOFILE/$FILE
+
+curl https://$SITE/$PATHTOFILE/$FILE >! $NEWFILENAME
+curl https://$SITE/$PATHTOFILE/$FILE -o $NEWFILENAME
+curl --output $NEWFILENAMEhttps://$SITE/$PATHTOFILE/$FILE 
+
+======================================================================
+Download files with login
+
+wget --user $USER --ask-password https://$SITE/$PATHTOFILE/$FILE
+
+curl --user $USER https://$SITE/$PATHTOFILE/$FILE -o $FILE
+curl --user $USER --output $FILE https://$SITE/$PATHTOFILE/$FILE
+
+======================================================================
+Download directory $DIR (with subdirectories)
+
+wget -r --no-check-certificate --no-host-directories --no-parent --reject="index.html*" "https://$SITE/$DIR"
+wget --user $USER --ask-password -r --no-check-certificate --no-host-directories --no-parent --reject="index.html*" "https://$SITE/$DIR" 
+
+======================================================================
+Upload files with curl and login
+
+curl --user $USER --upload-file $FILE https://$SITE/$PATHTOFILE/$FILE --anyauth
+
+======================================================================
+Make tar/zip file and encript with 7z
+
+tarlist=<tarlist>
+tarfile=<tarfile>
+zipfile=<zipfile>
+tar -c -v -f $tarfile -T $tarlist
+7z a -p -bso1 -bse0 -bsp0 $zipfile $tarfile
+now=`date +"%Y%m%d"` 
+cp $zipfile ${now}$zipfile
+
+======================================================================
+Manage TXT-files
+
+to test: 
+=> go to a temporary directory
+=> wget -O IN.txt https://raw.githubusercontent.com/pjgsch/tools/main/tpl/test-txt1.txt 
+
+pr --columns=3 --separator='|' --omit-header --omit-pagination --page-width=71 IN.txt 
+tr [opt] set1 set2             # translate or delete characters
+fold --width=40 IN.txt         # wrap each input line 
+split --lines=3 IN.txt         # split a file into pieces => x#
+csplit [opt] file pattern      # split a file into sections
+paste [opt] file               # merge lines of files
+cut [opt] file                 # remove sections from each line of file
+
+#### TXT => PS
+a2ps --portrait  --no-header --columns=1 --output=EX.ps IN.txt
+a2ps --landscape --no-header --borders no --output=EX.ps IN.txt
+a2ps --landscape --no-header --columns=1 --font-size=11 --output=EX.ps IN.txt
+a2ps --portrait  --no-header --columns=1 --font-size=10 --output=EX.ps IN.txt
+a2ps --landscape --no-header --columns=1 --borders no --chars-per-line=165 --output=EX.ps IN.txt
+
+enscript -1 -B --media=A4 --landscape --language=PostScript --output=EX.ps IN.txt 
+
+mpage -2 -f IN.txt >! EX.ps
+mpage -2 -f IN.txt >! EX.ps        % -f:  folds lines
+mpage -1 -l IN.txt >! EX.ps        % -l:  landscape mode (1 page)
+mpage -1 -bA4 IN.txt >! EX.ps      % -bA4:  A4 paper size
+
+#### TXT => HTML
+enscript -1 -B -h --media=A4 --language=html --output=EX.html IN.txt 
+
+#### TXT => PRINTER
+#a2ps --portrait  --columns=1 --no-header --borders no -P<printer> IN.txt
+#mpage -2 -Pps1 IN.txt 
+
+======================================================================
+Manage HTML-files
+
+to test: 
+=> go to a temporary directory
+=> wget -O IN.html https://raw.githubusercontent.com/pjgsch/tools/main/tpl/dem-html.html
+
+htmldoc --continuous --fontsize 11 -t pdf14 -f EX.pdf IN.html 
+htmldoc --continuous --fontsize 11 -t ps3 -f EX.pdf IN.html 
+htmldoc --continuous --fontsize 11 -t pdf14 --no-links -f EX.pdf IN.html 
+htmldoc --continuous --fontsize 11 -t pdf14 --no-links --nup 2 -f EX.pdf IN.html 
+htmldoc --continuous --fontsize 11 -t pdf14 --links --linkcolor blue --linkstyle underline -f EX.pdf IN.html 
+
+======================================================================
+Manage PS-files
+
+to test: 
+=> go to a temporary directory
+=> wget -O IN.ps https://raw.githubusercontent.com/pjgsch/tools/main/tpl/test-tex.ps
+
+psnup -d -pA4 -b5 -m5 -nup 2 IN.ps EX.ps
+psnup -d -pA4 -b5 -m5 -nup 16 IN.ps >! EX.ps 
+psnup -d -b5 -m5 -nup 2 IN.ps >! EX.ps
+psnup -d -pA4 -b5 -m5 -nup 4 IN.ps >! EX.ps    
+psnup -d -pA4 -b5 -m5 -nup 2 IN.ps >! EX.ps
+psnup -d -pA4 -b5 -m5 -nup 16 IN.ps >! EX.ps 
+
+#### PS => PDF
+ps2pdf IN.ps EX.pdf
+gs -dBATCH -dNOPAUSE -dQUIET -sPAPERSIZE=a4 -sDEVICE=pdfwrite -sOutputFile=EX.pdf IN.ps 
+
+#### PS => GIF
+convert IN.ps EX.gif 
+
+#### SELECT PAGES in PS
+psselect -p1-1 IN.ps EX.ps
+psselect -e IN.ps EXeven.ps
+psselect -o IN.ps EXodd.ps
+psselect -r IN.ps EXreversed.ps
+
+======================================================================
+Manage PDF-files
+
+to test: 
+=> go to a temporary directory
+=> wget -O IN.pdf https://raw.githubusercontent.com/pjgsch/tools/main/tpl/test-pdf.pdf
+=> wget -O INS.pdf https://raw.githubusercontent.com/pjgsch/tools/main/tpl/test-scan.pdf
+=> cp IN.pdf IN1.pdf
+=> cp IN.pdf IN2.pdf
+
+pdfshuffler IN.pdf &                       # interactive, X11
+
+#### ANOTATE
+xournal IN.pdf &                           # X11
+
+#### UPSIDE => UPSIDEDOWN (ROTATE 180 DEGREES)
+pdftk IN.pdf cat 1-endS output EX.pdf 
+
+#### SPLIT
+pdftk IN.pdf burst output EX-%d.pdf
+
+#### JOIN
+gs -dBATCH -dNOPAUSE -q -sDEVICE=pdfwrite -sOutputFile=EX.pdf IN1.pdf IN2.pdf
+convert -append IN1.pdf IN2.pdf EX.pdf     # bad result, increased size 
+
+#### MAKE PNG PREVIEW OF EACH PAGE
+gs -dSAFER -dBATCH -dNOPAUSE -r50 -sDEVICE=png16m '-sOutputFile=EX-%03d.png' IN.pdf  
+gs -dSAFER -dBATCH -dNOPAUSE -r50 -sDEVICE=png16m -dFirstpage=1 -dLastpage=1 '-sOutputFile=EX.png' IN.pdf 
+
+#### EXTRACT
+gs -dBATCH -dNOPAUSE -dQUIET -dSAFER -sDEVICE=pdfwrite -dFirstPage=2 -dLastPage=2 -sOutputFile=EX.pdf IN.pdf 
+pdftk A=IN.pdf cat Aeven output EXeven.pdf
+pdftk A=IN.pdf cat Aodd output EXodd.pdf
+
+#### MERGE AFTER SCANNING EVEN AND ODD PAGES
+pdftk A=EXodd.pdf B=EXeven.pdf shuffle A B output EX.pdf 
+pdftk A=EXodd.pdf B=EXeven.pdf shuffle A Bend-1 output EX.pdf 
+
+#### PDF => PS
+pdf2ps IN.pdf EX.ps 
+
+#### PDF => GIF
+convert IN.pdf EX.gif                          # not good
+convert -density 300 INS.pdf EX.gif
+
+#### PDF => JPG
+convert IN.pdf EX.jpg
+
+#### PDF => PNG
+convert -density 500 INS.pdf EX.png            # density: PPI
+
+======================================================================
+Manage image files
+
+to test: 
+=> go to a temporary directory
+=> wget -O IN.jpg https://raw.githubusercontent.com/pjgsch/tools/main/tpl/test-jpg.jpg
+
+#### JPG => GIF
+convert IN.jpg EX.gif               
+
+#### JPG => PNG
+convert IN.jpg EX.png
+
+#### MERGE JPG FILES
+/bin/cp IN.jpg IN1.jpg
+/bin/cp IN.jpg IN2.jpg
+
+convert -append IN1.jpg IN2.jpg EX.jpg
+convert +append IN1.jpg IN2.jpg EX.jpg
+
+montage IN1.jpg IN2.jpg -geometry 2000x2000 -mode Concatenate EX.jpg
+montage IN1.jpg IN2.jpg -geometry 2000x2000 -mode Concatenate EX.gif
+
+======================================================================
+Encription/decription
+
+to test: 
+=> go to a temporary directory
+=> wget -O IN.txt https://raw.githubusercontent.com/pjgsch/tools/main/tpl/test-txt1.txt 
+
+openssl enc -aes-256-cbc -e -in IN.txt -out INenc -p -pass pass:"tja"
+openssl enc -aes-256-cbc -d -in INenc -out EX.txt -p -pass pass:"tja" 
+
+7z a -p -bso1 -bse0 -bsp0 IN.7z IN.txt            # add files
+7z e IN.7z IN.txt                                 # extract files
+
+======================================================================
