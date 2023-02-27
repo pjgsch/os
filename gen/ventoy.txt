@@ -1,0 +1,65 @@
+====================================================
+VENTOY WEBPAGES
+
+https://www.ventoy.net/en/index.html
+https://www.ventoy.net/en/download.html
+https://www.ventoy.net/en/plugin_persistence.html
+
+Download the archive and extract it to get the ventoy-directory
+
+Execution of shell scripts is sometimes not possible 
+on a USB drive.
+Use the extracted ventoy-directory on the local machine
+and execute commands.
+
+read the README-file in the ventoy-directory
+
+use 'Ventoy2Disk.sh' to install Ventoy on the USB
+use 'CreatePersistentImg.sh' to create a persistence file
+
+====================================================
+COMMANDS FOR LINUX (EXAMPLES)
+
+check device name of the USB stick with 'df'
+
+sudo sh Ventoy2Disk.sh -i -r <space> /dev/<sdX>
+
+= <sdX>   : sdX is the target USB drive for ventoy
+= <space> : is 'reserved' space in MB on the USB
+
+create 3 directories in the ventoy-partition on the target USB
+- data    : for the persistence file(s)
+- iso     : for the iso-file(s)
+- ventoy  : for the ventoy.json file with the menu items
+            see : https://www.ventoy.net/en/plugin.html
+
+sudo sh CreatePersistentImg.sh [-l label] -s <size>
+
+= this will create a persistence file in the local
+  directory on the local machine.
+= [-l label] defaults to 'casper-rw'
+  default is ok for Linux Mint
+  see : https://www.ventoy.net/en/plugin_persistence.html
+= <size>  : size of the persistence file in MB
+  example : 1024, 2048, 3072, 4096
+= rename this persistence file 
+= copy the file to the data-directory on the target USB
+
+copy the iso-file(s) to the iso-directory on the target USB
+
+create the ventoy.json text-file in the ventoy-directory 
+on the target USB
+see : https://www.ventoy.net/en/plugin_persistence.html
+
+====================================================
+EXAMPLES
+
+sudo sh $PATHTOVENTOY/CreatePersistentImg.sh -l persistence -s 1024
+sudo sh $PATHTOVENTOY/CreatePersistentImg.sh -l persistence -c persistence.conf -s 1024
+sudo sh $PATHTOVENTOY/CreatePersistentImg.sh -l vtoycow -s 1024 
+sudo sh $PATHTOVENTOY/CreatePersistentImg.sh -l MX-Persist -s 4096 
+sudo sh $PATHTOVENTOY/CreatePersistentImg.sh -s 1024 
+sudo sh $PATHTOVENTOY/CreatePersistentImg.sh -t xfs -s 1024 
+
+====================================================
+
