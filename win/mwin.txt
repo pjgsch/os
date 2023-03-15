@@ -114,6 +114,7 @@ Hotkey [Win]            Start
 Hotkey [Win+E]          File Explorer
 Hotkey [Win+I]          Settings
 Hotkey [Win+R]          Run Dialog Box
+Hotkey [Win+L]          Lock Screen
 Hotkey [Win+S]          Search
 Hotkey [Win+Tab]        Task View
 Hotkey [Win+A]          Action Center
@@ -123,6 +124,8 @@ Hotkey [Win+Pause]      Control Panel
 Hotkey [Win+U]          Ease of Access
 HotKey [Win+Break]      System Properties
 Hotkey [Win+Pause+Break]Perfoemance
+Hotkey [Win+Shift+S]    Screenshot
+Hotkey [Alt+Cmd+Esc]    Close App
 
 ======================================================================
 Directories voor Windows
