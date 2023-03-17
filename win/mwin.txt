@@ -322,6 +322,7 @@ Web: commands           https://www.windows-commandline.com/cmd-commands/
 Web: Settings           https://ss64.com/nt/syntax-settings.html
 Web: Tools              https://learn.microsoft.com/en-us/sysinternals/
 Web: Documentation      https://learn.microsoft.com/en-us/docs/
+Web: Information        https://www.askvg.com/
 
 ======================================================================
 ######################################################################
