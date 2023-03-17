@@ -10,7 +10,8 @@ Commando's kunnen ook in een Shortcut worden omgezet.
 Windows 7, 10, 11 might differ
 
 Alltasks                C:\Windows\explorer.exe shell:::{ED7BA470-8E54-465E-825C-99712043E01C}
-Accessibility Options   control access
+Add new hardware        sysdm.cpl 
+Accessibility Options   control access | control access.cpl
 Action Center           "C:\ProgramData\Microsoft\Windows\Start Menu\Programs\Administrative Tools"
 Administrative Tools    control admintools
 Backup & Restore [A]    sdclt.exe | control.exe /name Microsoft.BackupAndRestore
@@ -42,7 +43,9 @@ Event Viewer            eventvwr.exe
 Findfast                findfast.cpl | control findfast.cpl
 Firewall                firewall.cpl
 Folder Properties       control folders
+Fonts Folder            control fonts
 Internet Properties     inetcpl.cpl | control inetcpl.cpl
+Joystick Properties     control joy.cpl
 Keyboard Properties     control keyboard
 Kill Process            pskill
 Kill Tasks              taskkill /F /IM <progname>
@@ -54,7 +57,10 @@ Magnifier               Magnify.exe
 Malicious Sftwr Remov   mrt.exe
 Memory Test             mdsched.exe
 Memory Usage            mem
+Microsoft Exchange      control mlcfg32.cpl
+Microsoft Mail          control wgpocpl.cpl
 Microsoft Mgmt Console  mmc
+Modem Properties        control modem.cpl
 MSConfig [A]            msconfig.exe
 Mouse                   main.cpl  |  control mouse
 Network Connections     control netconnections  |  ncpa.cpl
@@ -69,11 +75,11 @@ Optional Features [A]   optionalfeatures.exe
 Password Properties     password.cpl | control password.cpl
 Performance Monitor     permon.exe  |  perfmon.msc
 Permissions of files    cacls  |  subinacl
-Power                   powercfg.exe -l | powercfg.cpl | control powercfg.cpl
+Power                   powercfg.exe -l | powercfg.cpl | control powercfg.cpl | control main.cpl power
 Printers & Faxes        control printers | printers | shell:PrintersFolder
 Print queue             lpq
 Programs and Features   control /name Microsoft.ProgramsAndFeatures
-Programs                appwiz.cpl
+Programs (add/rem)      appwiz.cpl
 RAM Memory              Computer > System Properties
 RAM Memory              wmic memphysical get MaxCapacity /format:list
 Regional Settings       cntrol intl.cpl
