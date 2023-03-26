@@ -302,6 +302,7 @@ HotKey [Win+Break]      System Properties
 Hotkey [Win+Pause+Break]Perfoemance
 Hotkey [Win+Shift+S]    Screenshot
 Hotkey [Alt+Cmd+Esc]    Close App
+Hotkey [Win+=]          Magnefier
 
 ======================================================================
 Directories voor Windows
