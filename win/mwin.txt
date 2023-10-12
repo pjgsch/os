@@ -294,7 +294,7 @@ Hotkey [Win+L]          Lock Screen
 Hotkey [Win+S]          Search
 Hotkey [Win+Tab]        Task View
 Hotkey [Win+A]          Action Center
-Hotkey [Win+X]          Start Context Menu
+Hotkey [Win+X]          Start Context Menu (Taakbeheer)
 Hotkey [Ctrl+Shift+Esc] Task Manager
 Hotkey [Win+Pause]      Control Panel
 Hotkey [Win+U]          Ease of Access
@@ -303,6 +303,7 @@ Hotkey [Win+Pause+Break]Perfoemance
 Hotkey [Win+Shift+S]    Screenshot
 Hotkey [Alt+Cmd+Esc]    Close App
 Hotkey [Win+=]          Magnefier
+Hotkey [Alt+F4]         Afsluiten (na [Win+D]: focus bureaublad)
 
 ======================================================================
 Directories voor Windows

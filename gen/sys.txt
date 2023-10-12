@@ -43,14 +43,19 @@ wxp:  C:/WINDOWS/pchealth/helpctr/binaries/helpctr.exe           #help
 ======================================================================
 wi7:  F8                        select boot mode                 #boot
 wi7:  ( rundll32.exe user32.dll,LockWorkStation )  #screen#system#lock
-wi7:  ( shutdown /l )                              #system#logoff#stop
 wi7:  ( rundll32 powrprof.dll,SetSuspendState )  #system#sleep#suspend
-wi7:  ( shutdown /h )                                #system#hibernate
-wi7:  powercfg -h off                                       #hibernate 
-wi7:  ( shutdown /s /t 1 )           #now        #system#shutdown#stop
-wi7:  ( shutdown /s )                #slow       #system#shutdown#stop
-wi7:  ( shutdown /a )                #cancel    #system#shutdown#abort
-wi7:  ( shutdown /r )                                  #system#restart
+win:  powercfg -h off|on                                    #hibernate 
+win:  powercfg /h off|on                                    #hibernate
+win:  powercfg /h /type reduced  # geen 'sluimerstand', wel 'snel opstarten (S3)
+win:  powercfg -lastwake                                     #lastwake
+win:  shutdown /h /t 0            #suspend-to-disk#system#hibernate#S4
+win:  shutdown /s /t 0      #now                 #system#shutdown#stop
+win:  shutdown /s           #slow                #system#shutdown#stop
+win:  shutdown /a           #cancel             #system#shutdown#abort
+win:  shutdown /r /t 0                                 #system#restart
+win:  shutdown /r /o /t 0                   #system#restart#optionmenu
+wi7:  shutdown /l /t 0                             #system#logoff#stop
+win:  [Shift]+restart                                    UEFI settings
 win:  wmic os get OSArchitecture                    #arch#32/64-bit#OS
 win:  wmic csproduct get vendor, version                       #system
 win:  wmic computersystem get model,name,manufacturer,systemtype #system
@@ -180,6 +185,8 @@ lhp:  krandrtray                                     #menu#sys#display
 lmt:  mate-display-properties                                 #display
 lmt:  disper -l / -s / -S                                     #display
 lin:  lxrandr                                                 #display
+lin:  xrandr -q | grep ' connected '                          #display
+lin:  xrandr --output LVDS-1 --brightness 0.7                 #display
 ......................................................................
 xsetroot -solid DeepSkyBlue4
 xsetroot -solid snow
@@ -350,6 +357,8 @@ lhp:  rfkill list | (un)block <device number>                 #network
 lhp:  man net : admin. of Samba and remote CIFS servers
 netsh int ipv6 install                 
 netsh int tcp show global
+netsh wlan display prifiles
+netsh wlan show profile name=<name> key=clear
 netsh wlan show networks mode=bssid
 netsh wlan set hostednetwork mode=allow ssid=<name> key=<password>
 netsh wlan start hostednetwork
@@ -411,14 +420,18 @@ lin:  sudo nmap -sS IP                                #scan open ports
 lin:  sudo nmap -O 131.155.54.183/24           #scan open ports on LAN
 lin:  sudo nmap -sP 192.168.178.1/24 | grep -e 'Nmap' -e 'MAC'
 lin:  fping -cl -gds 131.155.54.0/24 2 | grep -v "ICMP|xmt"
-lhp:   sudo service network stop
-lhp:   sudo service wpa_supplicant stop
-lhp:   sudo chkconfig --level 12345 network off
-lhp:   sudo chkconfig --level 12345 wpa_supplicant off
-lhp:   sudo chkconfig --level 2345 NetworkManager on
-lhp:   sudo service NetworkManager restart
+lhp:  sudo service network stop
+lhp:  sudo service wpa_supplicant stop
+lhp:  sudo chkconfig --level 12345 network off
+lhp:  sudo chkconfig --level 12345 wpa_supplicant off
+lhp:  sudo chkconfig --level 2345 NetworkManager on
+lhp:  sudo service NetworkManager restart
 lhp:  lsmod | sort | grep iwl4965
-lhp:   sudo rmmod iwl4965 && sudo modprobe iwl4965
+lhp:  sudo rmmod iwl4965 && sudo modprobe iwl4965
+lin:  rfkill [list|unblock[wifi|bluetooth|all]]                #rfkill
+lin:  sudo rmmod iwl4965                              #troubleshooting
+lin:  sudo modprobe iwl4965                           #troubleshooting
+lin:  service network-manager restart                  #networkmanager
 ======================================================================
 win:  "%APPSDIR%\CurrPorts\CurrPorts.exe"                       #ports
 win:  "%APPSDIR%\Smartsniff\x86\smsniff.exe"                    #ports
@@ -2381,7 +2394,6 @@ killall lxpanel
 lxpanel [--profile LXDE]
 killall pcmanfm 
 pcmanfm --desktop [--profile LXDE|lubuntu]
-rfkill [list|unblock[wifi|bluetooth]]		#rfkill
 lxhotkey --gui=gtk				#hotkeys
 ======================================================================
 DUAL BOOT
