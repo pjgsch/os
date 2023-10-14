@@ -1,4 +1,13 @@
 ######################################################################
 
+Windows commands
+  https://ss64.com
+
+Windows info
+  https://www.schoonepc.nl/
+
+Windows vreemde tekens en sneltoetsen
+  https://www.vreemdetekens.nl/altcodes
+  https://www.tuxx.nl/sneltoetsen/
 
 ######################################################################
