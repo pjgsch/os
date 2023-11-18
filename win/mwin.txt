@@ -325,6 +325,8 @@ Web: Settings           https://ss64.com/nt/syntax-settings.html
 Web: Tools              https://learn.microsoft.com/en-us/sysinternals/
 Web: Documentation      https://learn.microsoft.com/en-us/docs/
 Web: Information        https://www.askvg.com/
+Web: Information        https://www.thewindowsclub.com/
+Web: Information        https://www.makeuseof.com/
 
 ======================================================================
 ######################################################################
