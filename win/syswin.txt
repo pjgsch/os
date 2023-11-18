@@ -30,6 +30,8 @@ Windows command line
   https://www.windows-commandline.com/
   https://windowsloop.com/windows-shell-commands/
   https://www.ionos.com/digitalguide/server/know-how/windows-cmd-commands/
+  https://www.techspot.com/guides/1724-command-prompt-what-you-can-do/
+  https://www.makeuseof.com/tag/15-cmd-commands-every-windows-user-know/
 
 Various
   https://www.itechtics.com
