@@ -298,6 +298,7 @@ Hotkey [Win+X]          Start Context Menu (Taakbeheer)
 Hotkey [Ctrl+Shift+Esc] Task Manager
 Hotkey [Win+Pause]      Control Panel
 Hotkey [Win+U]          Ease of Access
+Hotkey [Qin+V]          Clipboard
 HotKey [Win+Break]      System Properties
 Hotkey [Win+Pause+Break]Perfoemance
 Hotkey [Win+Shift+S]    Screenshot

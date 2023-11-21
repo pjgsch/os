@@ -153,16 +153,16 @@ Settings > System > Storage > Storage sense > configure s.s. > clean now
 # Maintenance
 ======================================================================
 Windows 10:
-regedit =>
-HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\WindowsNT\CurrentVersion
-  \Schedule\Maintenance =>
-  New D-WORD : MaintenanceDisabled 
-  Value : 0 
+== regedit =>
+   HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\WindowsNT\CurrentVersion
+   \Schedule\Maintenance =>
+   New D-WORD : MaintenanceDisabled 
+   Value : 0 
 ----------------------------------------------------------------------
 
 # Startup apps
 ======================================================================
-taskmgr.exe > Startup => disable apps at startup
+== taskmgr.exe > Startup => disable apps at startup
 ----------------------------------------------------------------------
 
 # Start apps
@@ -174,109 +174,106 @@ https://windowsloop.com/list-of-app-uri-commands-windows-10/
 # Wmic (Windows Management Instrumentation Command-line) commands
 ======================================================================
 wmic /?
-wmic context
 wmic bios get serialnumber
 wmic bios get version
 wmic bios get Manufacturer,Name,SMBIOSBIOSVersion,Version
-wmic partition list brief /format:htable [> C:\partitions.html]
-wmic os get version
-wmic os get Caption,CSDVersion,OSArchitecture,Version
-wmic os get Caption,CodeSet,CSName,InstallDate,Locale,NumberOfProcesses,OSArchitecture,SerialNumber,SystemDirectory,Version
-wmic startup get Caption,Command,Location /format:list
-wmic csproduct get name
-wmic csproduct list full
-wmic qfe list | find /c /v ""    --> number of installed updates
-wmic qfe list full /format:list
-wmic qfe list brief
+wmic context
 wmic cpu list /format:list
 wmic cpu get DeviceID,NumberOfCores,NumberOfLogicalProcessors
 wmic cpu get AddressWidth,CurrentClockSpeed,CurrentVoltage,L2CacheSize,L3CacheSize,LoadPercentage,Manufacturer,Name,NumberOfCores,NumberOfLogicalProcessors
 wmic cpu get Name,NumberOfCores,NumberOfLogicalProcessors
-wmic PATH Win32_videocontroller GET AdapterRAM,CurrentRefreshRate,Description,DriverVersion,VideoModeDescription
+wmic csproduct get name
+wmic csproduct list full
+wmic diskdrive get InterfaceType,Name,Size,Status
+wmic logicaldisk get size, freespace, caption
 wmic memphysical get MaxCapacity
 wmic memorychip get BankLabel,DataWidth,Manufacturer,PartNumber,Capacity,Speed,TypeDetail
-wmic volume get BlockSize,Capacity,DriveLetter,FileSystem,FreeSpace,IndexingEnabled,Label,MaximumFileNameLength
-wmic diskdrive get InterfaceType,Name,Size,Status
-wmic useraccount get Caption,Name,PasswordRequired,Status
+wmic os get version
+wmic os get Caption,CSDVersion,OSArchitecture,Version
+wmic os get Caption,CodeSet,CSName,InstallDate,Locale,NumberOfProcesses,OSArchitecture,SerialNumber,SystemDirectory,Version
+wmic partition list brief /format:htable [> C:\partitions.html]
+wmic path Win32_videocontroller GET AdapterRAM,CurrentRefreshRate,Description,DriverVersion,VideoModeDescription
 wmic product get name   --> all installed applications
+wmic qfe list | find /c /v ""    --> number of installed updates
+wmic qfe list full /format:list
+wmic qfe list brief
+wmic startup get Caption,Command,Location /format:list
+wmic useraccount get Caption,Name,PasswordRequired,Status
+wmic volume get BlockSize,Capacity,DriveLetter,FileSystem,FreeSpace,IndexingEnabled,Label,MaximumFileNameLength
 ----------------------------------------------------------------------
 
 # Windows performance test
 ======================================================================
-Run > perfmon (or: Search : Performance Monitor)
-Run > perfmon /report --> Resource and Performance Monitor
-
-Reports > System > System Performance
-
-Reports > System > System Diagnostics => Computer Name 
-
-Monitoring Tools > Performance Monitor
-
-Start > Settings > Control Panel > Reliability Monitor
+== Run > perfmon (or: Search : Performance Monitor)
+== Run > perfmon /report --> Resource and Performance Monitor
+== Reports > System > System Performance
+== Reports > System > System Diagnostics => Computer Name 
+== Monitoring Tools > Performance Monitor
+== Start > Settings > Control Panel > Reliability Monitor
 ----------------------------------------------------------------------
 
 # Memory Test
 ======================================================================
-[Win+R] > mdsched.exe
-Start > Settings > Control Panel > 
-        Administrative Tools > Windows Memory Diagnostics
+== [Win+R] > mdsched.exe
+== Start > Settings > Control Panel > 
+   Administrative Tools > Windows Memory Diagnostics
 ----------------------------------------------------------------------
 
 # Windows Troubleshooter
 ======================================================================
-= Start > Settings > Update & Security > Troubleshoot 
-  => Additional troubleshooters > [select] > 'Run the troubleshooter'
-= Start > Settings > Update & Security > Advanced Startup
-= cmd > shutdown /r /o => Restart with Advanced Options
+== Start > Settings > Update & Security > Troubleshoot 
+   => Additional troubleshooters > [select] > 'Run the troubleshooter'
+== Start > Settings > Update & Security > Advanced Startup
+== cmd > shutdown /r /o => Restart with Advanced Options
 ----------------------------------------------------------------------
 
 # Windows Startup Repair
 ======================================================================
-Restart and hold Shift Key --> restart (after 3 attempts automatically)
-Windows Recovery Environment > Startup Repair
+== Restart and hold Shift Key --> restart (after 3 attempts automatically)
+== Windows Recovery Environment > Startup Repair
 ----------------------------------------------------------------------
 
 # SFC (System File Checker); Admin
 ======================================================================
-sfc /scannow     -->  computer is scanned and issues are fixed
-sfc /verifyonly  -->  computer is scanned
+== sfc /scannow     -->  computer is scanned and issues are fixed
+== sfc /verifyonly  -->  computer is scanned
 ----------------------------------------------------------------------
 
 # DISM (Deployment Image Servicing and Management); Admin
 ======================================================================
-dism.exe /Online /Cleanup-Image /CheckHealth
-dism.exe /Online /Cleanup-Image /ScanHealth
-dism.exe /Online /Cleanup-Image /RestoreHealth /Source:<repairSource>\install.wim
+== dism.exe /Online /Cleanup-Image /CheckHealth
+== dism.exe /Online /Cleanup-Image /ScanHealth
+== dism.exe /Online /Cleanup-Image /RestoreHealth /Source:<repairSource>\install.wim
 ----------------------------------------------------------------------
 
 # CHKDSK
 ======================================================================
-chkdsk /?
-chkdsk /scan
+== chkdsk /?
+== chkdsk /scan
+----------------------------------------------------------------------
 
 # Windows Features
 ======================================================================
-Start > Control Panel > Programs and Features > Turn .. on or off
-optionalfeatures
-dism.exe /online /get-features /format:table | more
-dism.exe /online /enable-feature /featurename:<name>
-dism.exe /online /get-features /format:table | find "Enabled" | more
-dism.exe /online /disable-feature /featurename:<name>
-
-dism.exe /online /get-featureinfo/featurename:<name>
+== Start > Control Panel > Programs and Features > Turn .. on or off
+   optionalfeatures
+== dism.exe /online /get-features /format:table | more
+== dism.exe /online /enable-feature /featurename:<name>
+== dism.exe /online /get-features /format:table | find "Enabled" | more
+== dism.exe /online /disable-feature /featurename:<name>
+== dism.exe /online /get-featureinfo/featurename:<name>
 ----------------------------------------------------------------------
 
 # System Reset
 ======================================================================
-systemreset -cleanpc
+== systemreset -cleanpc
 ----------------------------------------------------------------------
 
 # System Restore
 ======================================================================
-Start computer and repeatedly hit F8 --> Windows Advanced Options
-Safe Mode with command prompt
-Sign in as Admin
-rstrui.exe --> System Restore
+== Start computer and repeatedly hit F8 --> Windows Advanced Options
+== Safe Mode with command prompt
+== Sign in as Admin
+== rstrui.exe --> System Restore
 ----------------------------------------------------------------------
 
 # Run test mode in Windows 10: enables installation of unsigned drivers
@@ -284,60 +281,58 @@ rstrui.exe --> System Restore
 Enable test mode
 Only possible if Secure Boot is disabled
 
-  cmd.exe as administrator
-  [Bcdedit.exe -set loadoptions ENABLE_INTEGRITY_CHECKS &&]
-  bcdedit.exe -set TESTSIGNING ON
-  restart
-  => watermark in lower-right corner of the screen
+== cmd.exe as administrator
+   [Bcdedit.exe -set loadoptions ENABLE_INTEGRITY_CHECKS &&]
+   bcdedit.exe -set TESTSIGNING ON
+   restart
+   => watermark in lower-right corner of the screen
 
 OR
 
-  [Win+I] => Windows Settings > Update & Security > Recovery > Restart
-  => Troubleshoot > Startup Settings
-  => Disable driver signature enforcement > Restart
-
+== [Win+I] => Windows Settings > Update & Security > Recovery > Restart
+   => Troubleshoot > Startup Settings
+   => Disable driver signature enforcement > Restart
 ----------------------------------------------------------------------
+
 Disable test mode:
 
-  cmd.exe as administrator
-  ( bcdedit.exe -set loadoptions ENABLE_INTEGRITY_CHECKS ) Sometimes needed
-  bcdedit.exe -set TESTSIGNING OFF
-  restart
+== cmd.exe as administrator
+   ( bcdedit.exe -set loadoptions ENABLE_INTEGRITY_CHECKS ) Sometimes needed
+   bcdedit.exe -set TESTSIGNING OFF
+   restart
 ----------------------------------------------------------------------
 
 # Make secure directory
 ======================================================================
-  md secdir\                      Make secure directory 'secdir'
-  rd secdir\                      Delete secure directory 'secdir'
-  start cmd -v runAs              in 'powershell'; Open cmd as administrator
-  Cipher /E                       Encript directory
+== md secdir\                      Make secure directory 'secdir'
+== rd secdir\                      Delete secure directory 'secdir'
+== start cmd -v runAs              in 'powershell'; Open cmd as administrator
+== Cipher /E                       Encript directory
 
-  attrib +h +s +r folder_name     Hide directory
-  attrib -h -s -r folder_name     Show directory
+== attrib +h +s +r folder_name     Hide directory
+== attrib -h -s -r folder_name     Show directory
 ----------------------------------------------------------------------
 
 # Multiple windows
 ======================================================================
-Snap             : Drag to side
-Flip             : [Alt+Tab] > [Tab] to cycle
-Task view        : in taskbar or [Win+Tab]
-Virtual desktops : Task view > New desktop
+== [Win+D] [Win+Ctrl+Rightarrow] [Win+Ctrl+Leftarrow] [Win+Ctrl+F4]
+== Snap             : Drag to side
+== Flip             : [Alt+Tab] > [Tab] to cycle
+== Task view        : in taskbar or [Win+Tab]
+== Virtual desktops : Task view > New desktop
 ----------------------------------------------------------------------
 
 # Updates
 ======================================================================
-Start > Settings > Updates & Security > Windows Update =>
-= Update history
-= Check for updates
-= Update settings
+== Start > Settings > Updates & Security > Windows Update =>
+   = Update history
+   = Check for updates
+   = Update settings
 
-control update
-(W10: ms-settings:windowsupdate)
-
-As Admin:
-[Win+R] > cmd.exe [CTRL+SHIFT+ENTER] =>
-wuauclt /detectnow
-wuauclt /updatenow
+== control update    (W10: ms-settings:windowsupdate)
+== [Win+R] > cmd.exe [CTRL+SHIFT+ENTER] =>
+   wuauclt /detectnow
+   wuauclt /updatenow
 
 systeminfo | find "KB"
 
@@ -365,41 +360,37 @@ Disable Automatic Update:
 
 # Battery
 ======================================================================
-powercfg/energy > Battery health report -->
-C:\Windows\system32\energy-report.html
+== powercfg/energy > Battery health report -->
+   C:\Windows\system32\energy-report.html
 ----------------------------------------------------------------------
 
 # Tasks
 ======================================================================
-tasklist
-taskkill /f /im <proces>        kill process by name
-taskkill /t /im <proces>        kill process and child processes
-taskkill /PID <pid>             kill process by PID
+== tasklist
+
+== taskkill /f /im <proces>        kill process by name
+== taskkill /t /im <proces>        kill process and child processes
+== taskkill /PID <pid>             kill process by PID
 ----------------------------------------------------------------------
 
 # Firefox
 ======================================================================
-start firefox                   Open firefox
-start firefox -private          Open firefox in private mode
-start firefox <website>         Open firefox to website
-start www.website_name.com      Open website in default browser
-ping www.website_name.com       See ip-address of website
-======================================================================
-for /f "skip=9 tokens=1,2 delims=:" %i in ('netsh wlan show profiles') 
- do @echo %j | findstr -i -v echo | netsh wlan show profiles %j key=clear
-Show wifi passwords
+== start firefox                   Open firefox
+== start firefox -private          Open firefox in private mode
+== start firefox <website>         Open firefox to website
+== start www.website_name.com      Open website in default browser
+== ping www.website_name.com       See ip-address of website
 ----------------------------------------------------------------------
 
 # Shutdown
 ======================================================================
-shutdown /s                     Shutdown immediately
-shutdown /a                     Abort shutdown
-shutdown /s /t time_in_seconds  Shutdown after countdown
-shutdown /s /t time_in_seconds /c \u201calert_message\u201d
-                                Shutdown after countdown with allert
-shutdown /f                     Force shutdown
-shutdown /r                     Restart
-shutdown /l                     Log off current user
+== shutdown /l                     Log off current user
+== shutdown /p                     Shutdown immediately
+== shutdown /s /t time_in_seconds  Shutdown after countdown
+== shutdown /f                     Force shutdown
+== shutdown /r                     Restart
+== shutdown /r /o                  restart in Advanced Start Optionstasklist
+== shutdown /a                     Abort shutdown
 
 [RC] in Desktop > New > Shortcut
 [RC] command in Start menu > 'Open file location'
@@ -411,51 +402,66 @@ OR : Drag and Drop
 
 # Internet connection
 ======================================================================
-nslookup <www.google.com> --> 
-  Browser uses DNS server and gives IP-address
-  IF NOT =>
-Start > Network Status => Change adapter options => Properties =>
-        'This connection uses ..' => Internet Protocol Version 4 =>
-        Use the following DNS server address : 
-        1.1.1.1 (Cloudflare) or 8.8.8.8 (Google)
+== nslookup <www.google.com> --> 
+   Browser uses DNS server and gives IP-address
+IF NOT
+== Start > Network Status => Change adapter options => Properties =>
+   'This connection uses ..' => Internet Protocol Version 4 =>
+   Use the following DNS server address : 
+   1.1.1.1 (Cloudflare) or 8.8.8.8 (Google)
 ----------------------------------------------------------------------
-ping <www.google.com> --> time must be about 10ms, no loss
+== ping <www.google.com> --> time must be about 10ms, no loss
+== tracert <www.google.com>
+== pathping <www.google.com> <port : 21|22|80|443>
+== Start > Settings > Network & Internet > Status =>
+   Chamge your network settings => Network troubleshooter
+== Start > Settings > Network & Internet > Wi-fi =>
+   Show available networks => Connect
+== Device Manager > Network adapters => Update Driver Software
 ----------------------------------------------------------------------
-tracert <www.google.com>
+
+# Wifi
+======================================================================
+Current Wifi:
+== Settings > Network & Internet > Network and sharing center >
+== select Wifi-network-name > Wireless properties > Security-tab >
+== Show characters in Network Security Key
+
+Past Wifi:
+== netsh wlan show profiles
+== netsh wlan show profile name=â€WiFiNAMEâ€ key=clear
+   => Key Content: WiFiPassword
 ----------------------------------------------------------------------
-pathping <www.google.com> <port : 21|22|80|443>
-----------------------------------------------------------------------
-Start > Settings > Network & Internet > Status =>
-Chamge your network settings => Network troubleshooter
-----------------------------------------------------------------------
-Start > Settings > Network & Internet > Wi-fi =>
-Show available networks => Connect
-----------------------------------------------------------------------
-Device Manager > Network adapters => Update Driver Software
+
+# Hotspot
+======================================================================
+== netsh wlan set hostednetwork mode=allow ssid="hallo" key="abcd1234!"
+== Network and Sharing > Change adapter settings > rightclic Internet device > Properties\Sharing
+   => "Allow other network users to connect through ..."
+
+== netsh wlan start hostednetwork
+== netsh wlan stop hostednetwork
 ----------------------------------------------------------------------
 
 # Software
 ======================================================================
-[Win+S] > Programs and Functions
-[select program] > Change or Repair
-======================================================================
+== [Win+S] > Programs and Functions
+   [select program] > Change or Repair
+== winget list
+
+== driverquery
+----------------------------------------------------------------------
 
 # Disable Cortana
 ======================================================================
-Search > Cortana > Disable: Let Cortana respond to Hey Cortana
+== Search > Cortana > Disable: Let Cortana respond to Hey Cortana
+----------------------------------------------------------------------
 
 # Advanced Options
 ======================================================================
-Restart => Troubleshoot > Advanced Options => Advanced Options Menu
-Settings > Update & Security > Advanced Startup
-Restart with Advanced Options
-----------------------------------------------------------------------
-
-# Test Mode (admin)
-======================================================================
-[Bcdedit.exe -set loadoptions ENABLE_INTEGRITY_CHECKS &&]
-  Bcdedit.exe -set TESTSIGNING OFF =>
-  Restart
+== Restart => Troubleshoot > Advanced Options => Advanced Options Menu
+== Settings > Update & Security > Advanced Startup
+== Restart with Advanced Options
 ----------------------------------------------------------------------
 
 ######################################################################
