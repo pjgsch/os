@@ -322,6 +322,8 @@ Websites
 
 Web: commands           https://www.webnots.com/200-run-commands-for-windows-10/
 Web: commands           https://www.windows-commandline.com/cmd-commands/
+Web: cpl-applets        https://www.itechtics.com/control-panel-applets-cpl/
+Web: msc-files          https://www.itechtics.com/msc-files/
 Web: Settings           https://ss64.com/nt/syntax-settings.html
 Web: Tools              https://learn.microsoft.com/en-us/sysinternals/
 Web: Documentation      https://learn.microsoft.com/en-us/docs/
