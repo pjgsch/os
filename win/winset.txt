@@ -1,0 +1,352 @@
+######################################################################
+======================================================================
+Settings
+
+https://www.schoonepc.nl/windows10/windows_10_instellingen.html
+https://www.schoonepc.nl/windows11/windows_11_instellingen.html
+
+======================================================================
+Control Panel applets are gradually removed from Windows.
+[ dir %windir%\system32\*.cpl ]
+Settings can be controled by URI commands ms-settings: in the Run-Dialog-Box [Win+R].
+(URI = Uniform Resource Identifier)
+
+Windows 10:
+
+Settings                                 [ms-settings:]
+Systeem
+    (apparaatbeheer)                                                     [(control) hdwwiz.cpl]
+	(Intel Graphics Control)                                             [(control) igfxCPL.cpl]
+	Beeldscherm                          [ms-settings:display]           [(control) desk.cpl][control desktop]
+		Nachtverlichting                 [ms-settings:nightlight]
+	Geluid                               [ms-settings:sound]             [(control) mmsys.cpl]
+	(Realtek)                                                            [(control) RTSnMg64.cpl]
+	Meldingen en acties                  [ms-settings:notifications]
+	Concentratiehulp                     [ms-settings:quiethours]
+	Energiebeheer en slaapstand          [ms-settings:powersleep]        [(control) powercfg.cpl]
+	Batterij                             [ms-settings:batterysaver]
+	Opslag                               [ms-settings:storagesense]
+		Opslag Locatie                   [ms-settings:savelocations]
+		Ruimte vrijmaken                 [ms-settings:storagepolicies]
+	Tablet                               [ms-settings:tabletmode]
+	Multitasking                         [ms-settings:multitasking]
+	Op deze pc projecteren               [ms-settings:project]
+	Gedeelde ervaringen                  [ms-settings:crossdevice]
+	Klembord                             [ms-settings:clipboard]
+	Extern bureaublad                    [ms-settings:remotedesktop]
+	Info                                 [ms-settings:about]             [Win+Pause]
+----------------------------------------------------------------------
+Apparaten
+	Bluetooth en andere apparaten        [ms-settings:bluetooth]         [(control) bthprops.cpl]
+	Printers en scanners                 [ms-settings:printers]          [control printers][control sticpl.cpl]
+	Muis                                 [ms-settings:mousetouchpad]     [(control) main.cpl][control mouse]
+	Touchpad                             [ms-settings:devices-touchpad]
+	Typen                                [ms-settings:typing]            [contol keyboard]
+	Pen en Windows Ink                   [ms-settings:pen]
+	Automatisch afspelen                 [ms-settings:autoplay]
+	USB                                  [ms-settings:usb]
+----------------------------------------------------------------------
+Telefoon
+	Telefoon                             [ms-settings:mobile-devises]    [(control) telephon.cpl][control modem]
+----------------------------------------------------------------------
+Netwerk en internet
+    (Adapter opties)                                                     [(control) ncpa.cpl][control netconnections]
+	(Eigenschappen van Internet)                                         [(control) inetcpl.cpl]
+	Status                               [ms-settings:network-status]
+	(Cel en SIM)                         [ms-settings:network-cellular]
+	Wi-Fi                                [ms-settings:network-wifi]
+		Manage known networks            [ms-settings:network-wifisettings]
+		Calling                          [ms-settings:network-wificalling]
+	Ethernet                             [ms-settings:network-ethernet]
+	Inbelverbindingen                    [ms-settings:network-dialup]
+	VPN                                  [ms-settings:network-vpn]
+	Vliegtuigstand                       [ms-settings:network-airplanemode]
+	Mobiele hotspot                      [ms-settings:network-mobilehotspot]   
+	                                     [ms-settings:datausage]
+	Proxy                                [ms-settings:network-proxy]
+----------------------------------------------------------------------
+Persoonlijke instellingen
+	Achtergrond                          [ms-settings:personalization-background] [(control) color.cpl]
+	Kleuren                              [ms-settings:colors]
+	Vergrendelscherm                     [ms-settings:lockscreen]
+	Thema's                              [ms-settings:themes]
+	Lettertypen                          [ms-settings:fonts]
+	Startmenu                            [ms-settings:personalization-start]
+	Taakbalk                             [ms-settings:taskbar]
+----------------------------------------------------------------------
+Apps
+	Apps en onderdelen                   [ms-settings:appsfeatures]      [(control) appwiz.cpl][control /name Microsoft.ProgramsAndFeatures]
+		Optional Features                [ms-settings:optionalfeatures]
+	Standaard-apps                       [ms-settings:defaultapps]
+	Offlinekaarten                       [ms-settings:maps]
+	Apps voor websites                   [ms-settings:appsforwebsites]
+	Video afspelen                       [ms-settings:videoplayback]
+	Opstarten                            [ms-settings:startupapps]
+----------------------------------------------------------------------
+Accounts
+    (Gebruikrsaccountbeheer)                                             [(control) sysdm.cpl]
+	Uw info                              [ms-settings:yourinfo]
+	Email en accounts                    [ms-settings:emailandaccounts]
+	Aanmeldingsopties                    [ms-settings:signinoptions]
+	Toegang tot werk of school           [ms-settings:workplace]
+	(Famiie en anderen)                  [ms-settings:otherusers]
+	Uw instellingen synchroniseren       [ms-settings:sync]
+----------------------------------------------------------------------
+Tijd en taal
+	Datum en tijd                        [ms-settings:dateandtime]       [(control) timedate.cpl]
+	Land/regio                           [ms-settings:regionlanguage]    [(control) intl.cpl]
+	Taal                                 [ms-settings:regionlanguage]
+	Spraak                               [ms-settings:speech]
+----------------------------------------------------------------------
+Gaming
+    (Spelbesturing)                                                      [(control) joy.cpl]
+	Game Bar                             [ms-settings:gaming-gamebar]
+	Opnames                              [ms-settings:]
+	Gamemodus                            [ms-settings:gaming-gamemode]
+----------------------------------------------------------------------
+Toegankelijkheid
+	Gezichtsvemogen
+		Beeldscherm                      [ms-settings:easeofaccess-display]
+		Muisaanwijzer                                                    
+		Tekstcursor
+		Vergrootglas                     [ms-settings:easeofaccess-magnifier]
+		Kleurfilters                     [ms-settings:easeofaccess-colorfilter]
+		Hoog contrast                    [ms-settings:easeofaccess-highcontrast]
+		Verteller                        [ms-settings:easeofaccess-narrator]
+	Gehoor
+		Audio                            [ms-settings:easeofaccess-audio]
+		Ondertiteling                    [ms-settings:easeofaccess-closedcaptioning]
+	Interactie
+		Spraak                           [ms-settings:easeofaccess-speechrecognition]
+		Toetsenbord                      [ms-settings:easeofaccess-keyboard]
+		Muis                             [ms-settings:easeofaccess-mouse]
+		Ogenbediening                    [ms-settings:easeofaccess-eyegaze]
+		(Andere opties)                  [ms-settings:easeofaccess-otheroptions]
+----------------------------------------------------------------------
+Zoeken
+	Machtigingen en geschiedenis
+	Zoeken in Windows
+----------------------------------------------------------------------
+Privacy
+	Windows-machtigingen
+		Algemeen                         [ms-settings:privacy-general]
+		Spraak                           [ms-settings:privacy-speechtyping]
+		Pers. inst. handschrift en typen [ms-settings:privacy-speechtyping]
+		Diagnostische gegevens&feedback  [ms-settings:privacy-feedback]
+		Activiteitengeschiedenis         [ms-settings:privacy-activityhistory]
+	App-machtigingen
+		Locatie                          [ms-settings:privacy-location]
+		Camera                           [ms-settings:privacy-webcam]
+		Microfoon                        [ms-settings:privacy-microphone]
+		Stemactivering                   
+		Meldingen                        [ms-settings:privacy-notifications]
+		Accountgegevens                  [ms-settings:privacy-accountinfo]
+		Contactpersonen                  [ms-settings:privacy-contacts]
+		Agenda                           [ms-settings:privacy-calendar]
+		Telefoongesprekken               
+		Oproepgeschiedenis               [ms-settings:privacy-callhistory]
+		E-mail                           [ms-settings:privacy-email]
+		Taken                            [ms-settings:privacy-tasks]
+		Berichten                        [ms-settings:privacy-messaging]
+		Radio's                          [ms-settings:privacy-radios]
+		Overige apparaten                [ms-settings:privacy-customdevices]
+		Achtergrond-apps                 [ms-settings:privacy-backgroundapps]
+		Diagnostiek van app              [ms-settings:privacy-ppdiagnostics]
+		Automatische betandsdownloads    [ms-settings:privacy-automaticfiledownloads]
+		Documenten                       [ms-settings:privacy-documents]
+		Afbeeldingen                     [ms-settings:privacy-pictures]
+		Video's                          [ms-settings:privacy-videos]
+		Bestandssysteem                  [ms-settings:privacy-broadfilesystemaccess]
+----------------------------------------------------------------------
+Bijwerken en beveiliging
+    (Firewall)                                                           [(control) firewall.cpl]
+	(Beveiliging en onderhoud)                                           [(control) wscui.cpl]
+	Windows Update                       [ms-settings:windowsupdate      [control update]
+		Check for updates                [ms-settings:windowsupdate-action]
+		Update history                   [ms-settings:windowsupdate-history]
+		Restart options                  [ms-settings:windowsupdate-restartoptions]
+		Advanced options                 [ms-settings:windowsupdate-options]
+	Delivery Optimization                
+	Windows-beveiiging                   [ms-settings:windowsdefender]
+	Back-up                              [ms-settings:backup]
+	Problemen oplossen                   [ms-settings:troubleshoot]
+	Systeemherstel                       [ms-settings:recovery]
+	Activering                           [ms-settings:activation]
+	Mijn apparaat zoeken                 [ms-settings:findmydevice]
+	Voor ontwikkelaars                   [ms-settings:developers]
+----------------------------------------------------------------------
+Gemengde realiteit                       
+    Audio en stem                        [ms-settings:holographic-audio]
+
+======================================================================
+WMIC (Windows Management Instrumentation Command-line)
+
+WMIC's are graduallu removed from Windows.
+Commands for WMI can be used in Power Shell.
+
+wmic /?
+wmic bios get serialnumber
+wmic bios get version
+wmic bios get Manufacturer,Name,SMBIOSBIOSVersion,Version
+wmic context
+wmic cpu list /format:list
+wmic cpu get DeviceID,NumberOfCores,NumberOfLogicalProcessors
+wmic cpu get AddressWidth,CurrentClockSpeed,CurrentVoltage,L2CacheSize,L3CacheSize,LoadPercentage,Manufacturer,Name,NumberOfCores,NumberOfLogicalProcessors
+wmic cpu get Name,NumberOfCores,NumberOfLogicalProcessors
+wmic csproduct get name
+wmic csproduct list full
+wmic diskdrive get InterfaceType,Name,Size,Status
+wmic logicaldisk get size, freespace, caption
+wmic logicaldisk get filesystem, caption, drivetype, size, freespace, name, volumename
+wmic memphysical get MaxCapacity
+wmic memorychip get BankLabel,DataWidth,Manufacturer,PartNumber,Capacity,Speed,TypeDetail
+wmic os get version
+wmic os get Caption,CSDVersion,OSArchitecture,Version
+wmic os get Caption,CodeSet,CSName,InstallDate,Locale,NumberOfProcesses,OSArchitecture,SerialNumber,SystemDirectory,Version
+wmic partition list brief /format:table 
+wmic path Win32_videocontroller GET AdapterRAM,CurrentRefreshRate,Description,DriverVersion,VideoModeDescription
+wmic product get name   --> all installed applications
+wmic qfe list | find /c /v ""    --> number of installed updates
+wmic qfe list full /format:list
+wmic qfe list brief
+wmic startup get Caption,Command,Location /format:list
+wmic useraccount get Caption,Name,PasswordRequired,Status
+wmic volume get BlockSize,Capacity,DriveLetter,FileSystem,FreeSpace,IndexingEnabled,Label,MaximumFileNameLength
+
+======================================================================
+Executables.
+
+[ dir %windir%\system32\*.exe ]
+[ https://ss64.com/nt/ ]
+
+Backup and restore      sdclt.exe
+Bluetooth               fsquirt.exe
+Boot Configuration      bcdedit.exe
+Boot Configuration      bootcfg.exe
+Calculator              calc.exe
+Character Map           charmap.exe
+Cleanup                 cleanmgr.exe
+Compare two files       fc.exe
+Compare two file sets   comp.exe
+Control Panel           control.exe  |  shell:ControlPanelFolder
+Defragmentation         defrag.exe /? (start service first)  |  dfrg.msc
+DISM                    dism.exe /Online /Cleanup-Image /CheckHealth
+Driver List             driverquery.exe /v /fo csv > drivers.csv
+Driver Verifier         verifier.exe
+Event Viewer            eventvwr.exe
+Kill Tasks              taskkill.exe /F /IM <progname>
+Magnifier               magnify.exe
+Malicious Sftwr Remov   mrt.exe
+Memory Test             mdsched.exe
+MSConfig [A]            msconfig.exe
+Network Info            ipconfig | tracert | ping | pathping | arp -a | netsh | netstat | nslookup
+Network Resources       net.exe
+Notepad                 notepad.exe
+Onscreen Keyboard       osk.exe
+Open File List          openfiles.exe
+Optional Features [A]   optionalfeatures.exe
+Performance Monitor     permon.exe  
+Permissions of files    cacls,exe
+Power                   powercfg.exe
+Registry Editor         regedit.exe | regedit32.exe
+Resource Monitor [A]    perfmon.exe /res
+Scheduled Tasks         schtasks.exe /?
+Services                sc.exe
+SFC Scan                sfc.exe [ /verifyonly | /scannow ]
+Shut Down               shutdown  |  psshutdown
+System Configuration    sysedit.exe | msconfig.exe
+Sys Prop Protection [A] SystemPropertiesProtection.exe
+System Info             msinfo32.exe
+System Restore          rstrui.exe
+Task List               tasklist.exe
+Task Manager            taskmgr.exe
+Users Accounts [A]      netplwiz.exe
+Usernames & Passwords   cmdkey.exe
+Utility Manager         utilman.exe
+Windows Installer       msiexec.exe
+Windows Version         winver.exe
+Wordpad                 write.exe
+
+======================================================================
+Hotkeys
+
+Hotkey [Win]                    Start Menu
+Hotkey [Ctrl+Esc]               Start Menu
+Hotkey
+Hotkey [Win+A]                  Action Center
+Hotkey [Win+C]                  Cortana
+Hotkey [Win+D]                  Show/hide Desktop
+Hotkey [Win+E]                  File Explorer
+Hotkey [Win+F]                  Feedback (W10/11) / Search (W7)S
+Hotkey [Win+G]                  Gaming info
+Hotkey [Win+H]                  Dictation
+Hotkey [Win+I]                  Settings
+Hotkey [Win+K]                  Connections to wireless devices
+Hotkey [Win+L]                  Lock Screen / Switch user
+Hotkey [Win+M]                  Minimizes all windows
+Hotkey [Win+Home]               Minimizes all windows
+Hotkey [Win+Shift+M]            Restore all windows
+Hotkey [Win+P]                  External displays/projectors
+Hotkey [Win+Q]                  Search Box
+Hotkey [Win+R]                  Run Dialog Box
+Hotkey [Win+S]                  Search
+Hotkey [Win+T]                  Cyle trough items on Taskbar
+Hotkey [Win+U]                  Ease of Access Center
+Hotkey [Win+V]                  Clipboard
+Hotkey [Win+W]                  Ink Workspace
+Hotkey [Win+X]                  Start Context Menu (Taakbeheer)
+Hotkey
+Hotkey [Win+LeftArrow]          Snaps active window to left
+Hotkey [Win+RightArrow]         Snaps active window to right
+Hotkey [Win+UpArrow]            Maximize active window
+Hotkey [Win+DownArrow]          Restore active window to initial state / Minimize active window
+Hotkey [Win+Shift+UpArrow]      Maximizes active window vertically
+Hotkey [Win+Shift+DownArrow]    Restore active window to initial state
+Hotkey
+Hotkey [Win+Ctrl+D]             New virtual desktop
+Hotkey [Win+Ctrl+LeftArrow]     Switch to previous virtual desktop
+Hotkey [Win+Ctrl+RightArrow]    Switch to next virtual desktop
+Hotkey [Win+Ctrl+F4]            Close current virtual desktop
+Hotkey
+Hotkey [Win+=][Win+Num+]        Open Magnifier
+Hotkey [Win++][Win+Num+]        Magnifier zoom in
+Hotkey [Win+-][Win+Num-]        Magnifier zoom out
+Hotkey [Win+Esc]                Close Magnifier
+Hotkey
+Hokey  [Win+1,2,..]             Open first, second, .. item in Taskbar
+Hotkey [Win+PrintScreen]        Screenshot
+Hotkey [Win+Shift+S]            Screenshot
+Hotkey [Win+Tab]                Task View / show all windows
+Hotkey [Win+Pause]              Control Panel
+HotKey [Win+Break]              System Properties
+Hotkey [Win+Pause+Break]        Performance
+Hotkey [Win+Space]              Select keyboard
+Hotkey
+Hotkey [Ctrl+P]                 Print
+Hotkey [Ctrl+Alt+Tab]           Show all windows
+Hotkey [Ctrl+Shift+Esc]         Task Manager
+Hotkey [Alt+Cmd+Esc]            Close App
+Hotkey [Alt+F4]                 Afsluiten (na [Win+D]: focus bureaublad)
+Hotkey [F11]                    Maximize screen
+
+======================================================================
+Directories
+
+Commands in Run-Dialog-Box [Win+R].
+
+Dir Appsfolder         shell:AppsFolder
+Dir SendTo             shell:SendTo  |  C:\Users\piet\AppData\Roaming\Microsoft\Windows\SendTo
+Dir Startup            shell:Startup
+Dir Startup            shell:Common Startup
+Dir Start              shell:Common Start Menu
+Dir Cookies            shell:Cookies
+Dir History            shell:History
+Dir Screenshots        shell:Screenshots
+Dir System             shell:System
+Dir Printers           shell:PrintersFolder
+Dir Recent items       shell:Recent
+Dir Recycle bin        shell:RecycleBinFolder
+Dir Search             shell:Searches
+
+======================================================================
+######################################################################
