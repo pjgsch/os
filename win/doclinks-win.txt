@@ -1,10 +1,90 @@
 ######################################################################
 
-Windows commands
-  https://ss64.com
+Nieuwe computer 
+  https://www.seniorweb.nl/artikel/een-nieuwe-computer-gekocht-wat-nu
+  https://www.makeuseof.com/tag/things-must-do-brand-new-laptop/
+  https://support.microsoft.com/nl-nl/windows/windows-activeren-c39005d4-95ee-b91e-b399-2820fda32227
+  https://www.coolblue.nl/advies/hp-laptop-installeren.html
+  https://computertotaal.nl/artikelen/pc/je-nieuwe-pc-inwijden-doe-je-zo/
+  https://www.laptopmag.com/articles/out-of-the-box-laptop-tips
 
-Windows info
+Windows 10 Installatie Handleiding
+  https://www.icttipsandtricks.nl/2016/10/10/handleiding-windows-10-installeren-deel-1/amp/
+  https://www.howtogeek.com/howto/32523/how-to-manually-repair-windows-7-boot-loader-problems/
+
+Windows 10 
   https://www.schoonepc.nl/
+  https://www.seniorweb.nl/onderwerp/windows-10
+  https://www.gratiscursus.be/Windows_10/index.html
+  https://learn.microsoft.com/en-us/docs/
+  https://edu.gcfglobal.org/en/windowsbasics/
+  https://www.askvg.com/
+  https://www.thewindowsclub.com/
+  https://www.makeuseof.com/
+
+Windows 10 Account
+  https://computertotaal.nl/artikelen/pc/zo-gebruik-je-windows-10-zonder-microsoft-account-70681/
+
+Microsoft technical documentation
+  https://docs.microsoft.com/en-us/
+
+Windows command line
+  https://ss64.com
+  https://docs.microsoft.com/en-us/previous-versions/windows/it-pro/windows-xp/bb490890(v=technet.10)?redirectedfrom=MSDN
+  https://www.webnots.com/200-run-commands-for-windows-10/
+  https://www.windows-commandline.com/
+  https://windowsloop.com/windows-shell-commands/
+  https://www.ionos.com/digitalguide/server/know-how/windows-cmd-commands/
+  https://www.techspot.com/guides/1724-command-prompt-what-you-can-do/
+  https://www.makeuseof.com/tag/15-cmd-commands-every-windows-user-know/
+
+Various
+  https://www.itechtics.com
+  https://www.schoonepc.nl/index.html
+  https://www.osradar.com/the-11-best-tricks-for-windows-11/
+
+Password recovery
+  https://computertotaal.nl/artikelen/apps-software/zo-herstel-je-je-windows-10-wachtwoord/
+  https://opensource.com/article/18/3/how-reset-windows-password-linux
+  https://www.cyberpratibha.com/blog/how-to-find-administrator-password-of-window-10-using-kali-linux/?amp=1
+
+Wifi Password
+  https://geekflare.com/find-windows-wifi-password/
+
+Startup
+  https://www.ubackup.com/articles/windows-10-startup-repair-command-prompt.html
+
+Internet
+  https://www.bleepingcomputer.com/news/microsoft/best-windows-10-commands-to-diagnose-your-internet-connection/
+
+Diagnostic Tools
+  https://helpdeskgeek.com/free-tools-review/15-windows-diagnostics-tools-to-improve-your-pcs-health/
+  https://www.cigatisolutions.com/blog/diagnostics-on-windows-10/
+  https://www.itechtics.com/windows-10-performance-test/
+  https://www.techspot.com/article/2349-windows-11-performance/
+
+Microsoft Support
+  https://docs.microsoft.com/en-us/windows/client-management/windows-10-support-solutions
+
+Repair Tools
+  https://geekflare.com/windows-problem-solver-tools/
+
+Windows problems
+  https://www.techradar.com/how-to/100-common-windows-10-problems
+  https://recoverit.wondershare.com/windows-10/windows-10-common-problems-and-how-to-fix-them.html
+
+Fix Copy/Paste
+  https://www.osradar.com/i-cannot-copy-and-paste-on-windows-how-to-fix-it
+
+Hardware check
+  https://www.partitionwizard.com/partitionmanager/pc-hardware-check.html
+  https://devicetests.com/
+  https://social.technet.microsoft.com/wiki/contents/articles/53235.windows-10-built-in-tools-for-hard-disk-health-check.aspx
+  https://techguided.com/best-tools-to-stress-test-p-cpu-ram-gpu
+  https://www.howtogeek.com/736310/how-to-print-a-test-page-in-windows-10/
+
+Environment variables
+  https://windowsloop.com/list-of-all-environment-variables-in-windows-10/
 
 Windows vreemde tekens en sneltoetsen
   https://www.vreemdetekens.nl/altcodes

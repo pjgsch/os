@@ -8,12 +8,17 @@ https://www.schoonepc.nl/windows11/windows_11_instellingen.html
 ======================================================================
 Control Panel applets are gradually removed from Windows.
 [ dir %windir%\system32\*.cpl ]
+[ https://www.itechtics.com/control-panel-applets-cpl/ ]
+
 Settings can be controled by URI commands ms-settings: in the Run-Dialog-Box [Win+R].
 (URI = Uniform Resource Identifier)
+[ https://ss64.com/nt/syntax-settings.html ]
 
 Windows 10:
 
-Settings                                 [ms-settings:]
+Alltasks  [ C:\Windows\explorer.exe shell:::{ED7BA470-8E54-465E-825C-99712043E01C} ]
+
+Settings                                     [ms-settings:]
 Systeem
     (apparaatbeheer)                                                     [(control) hdwwiz.cpl]
 	(Intel Graphics Control)                                             [(control) igfxCPL.cpl]
@@ -181,7 +186,7 @@ Gemengde realiteit
 ======================================================================
 WMIC (Windows Management Instrumentation Command-line)
 
-WMIC's are graduallu removed from Windows.
+WMIC's are gradually removed from Windows.
 Commands for WMI can be used in Power Shell.
 
 wmic /?
@@ -214,20 +219,34 @@ wmic useraccount get Caption,Name,PasswordRequired,Status
 wmic volume get BlockSize,Capacity,DriveLetter,FileSystem,FreeSpace,IndexingEnabled,Label,MaximumFileNameLength
 
 ======================================================================
+Microsoft Management .msc files.
+
+[ https://www.itechtics.com/msc-files/ ]
+
+Microsoft Mgmt Console  mmc
+
+Certificate Manager     cdrtmgr.msc | certmgr.msc
+Component Services      comexp.msc
+Computer Management     compmgmt.msc
+Device Management       devmgmt.msc
+Disk Management [A]     diskmgmt.msc
+Local Security Settings secpol.msc
+Local Users & Groups    lusrmgr.msc
+Removable Storage       ntmsmgr.msc
+Services                services.msc | srvmgr.cpl
+Task Schedular          taskschd.msc
+
+======================================================================
 Executables.
 
 [ dir %windir%\system32\*.exe ]
 [ https://ss64.com/nt/ ]
 
-Backup and restore      sdclt.exe
+Backup and restore      sdclt.exe | control.exe /name Microsoft.BackupAndRestore
 Bluetooth               fsquirt.exe
 Boot Configuration      bcdedit.exe
 Boot Configuration      bootcfg.exe
-Calculator              calc.exe
-Character Map           charmap.exe
 Cleanup                 cleanmgr.exe
-Compare two files       fc.exe
-Compare two file sets   comp.exe
 Control Panel           control.exe  |  shell:ControlPanelFolder
 Defragmentation         defrag.exe /? (start service first)  |  dfrg.msc
 DISM                    dism.exe /Online /Cleanup-Image /CheckHealth
@@ -235,15 +254,11 @@ Driver List             driverquery.exe /v /fo csv > drivers.csv
 Driver Verifier         verifier.exe
 Event Viewer            eventvwr.exe
 Kill Tasks              taskkill.exe /F /IM <progname>
-Magnifier               magnify.exe
 Malicious Sftwr Remov   mrt.exe
 Memory Test             mdsched.exe
 MSConfig [A]            msconfig.exe
 Network Info            ipconfig | tracert | ping | pathping | arp -a | netsh | netstat | nslookup
 Network Resources       net.exe
-Notepad                 notepad.exe
-Onscreen Keyboard       osk.exe
-Open File List          openfiles.exe
 Optional Features [A]   optionalfeatures.exe
 Performance Monitor     permon.exe  
 Permissions of files    cacls,exe
@@ -253,19 +268,16 @@ Resource Monitor [A]    perfmon.exe /res
 Scheduled Tasks         schtasks.exe /?
 Services                sc.exe
 SFC Scan                sfc.exe [ /verifyonly | /scannow ]
-Shut Down               shutdown  |  psshutdown
 System Configuration    sysedit.exe | msconfig.exe
 Sys Prop Protection [A] SystemPropertiesProtection.exe
 System Info             msinfo32.exe
 System Restore          rstrui.exe
-Task List               tasklist.exe
 Task Manager            taskmgr.exe
 Users Accounts [A]      netplwiz.exe
 Usernames & Passwords   cmdkey.exe
 Utility Manager         utilman.exe
 Windows Installer       msiexec.exe
 Windows Version         winver.exe
-Wordpad                 write.exe
 
 ======================================================================
 Hotkeys

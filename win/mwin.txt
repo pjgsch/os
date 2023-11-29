@@ -9,327 +9,52 @@ Commando's kunnen ook in een Shortcut worden omgezet.
 ======================================================================
 Windows 7, 10, 11 might differ
 
-Alltasks                C:\Windows\explorer.exe shell:::{ED7BA470-8E54-465E-825C-99712043E01C}
-Add new hardware        sysdm.cpl 
-Accessibility Options   control access | control access.cpl
+Setting commands
+
 Action Center           "C:\ProgramData\Microsoft\Windows\Start Menu\Programs\Administrative Tools"
 Administrative Tools    control admintools
-Backup & Restore [A]    sdclt.exe | control.exe /name Microsoft.BackupAndRestore
-Bluetooth               fsquirt.exe
-Boot Configuration      bcdedit  |  bootcfg
-Calculator              calc.exe
-Certificate Manager     cdrtmgr.msc | certmgr.msc
-Character Map           charmap.exe
-Cleanup                 cleanmgr.exe
-Color Management        color.cpl | control color
-Command Prompt          cmd.exe
-Compare two files       fc
-Compare two file sets   comp
-Component Services      comexp.msc
-Computer                %windir%\explorer
-Computer Management     compmgmt.msc
-Control Panel           control.exe  |  shell:ControlPanelFolder
-Defragmentation         defrag.exe /? (start service first)  |  dfrg.msc
-Device Management       devmgmt.msc
-Directory & File Tree   tree
-Disk Management [A]     diskmgmt.msc
-Disk Space              freedisk
-Disk Usage in Dir       diskuse  |  diruse
-DISM                    dism.exe /Online /Cleanup-Image /CheckHealth
-Display Properties      desk.cpl  |  control desktop
-Driver List             driverquery /v /fo csv > drivers.csv
-Driver Verifier         verifier.exe
-Event Viewer            eventvwr.exe
 Findfast                findfast.cpl | control findfast.cpl
-Firewall                firewall.cpl
 Folder Properties       control folders
 Fonts Folder            control fonts
-Internet Properties     inetcpl.cpl | control inetcpl.cpl
-Joystick Properties     control joy.cpl
 Keyboard Properties     control keyboard
+Network Properties      netcpl.cpl
+Network Setup Wzrd      netsetup.cpl | control netcpl.cpl 
+Password Properties     password.cpl | control password.cpl
+User Account Mgr        nusrmgr.cpl
+
+Tools
+
+Calculator              calc.exe
+Character Map           charmap.exe
+Cleanup                 cleanmgr.exe
+Command Prompt          cmd.exe
+Compare two files       fc.exe
+Compare two file sets   comp.exe
+Computer                %windir%\explorer
+Directory & File Tree   tree
+Disk Space              freedisk.exe
+Disk Usage in Dir       diskuse  |  diruse
 Kill Process            pskill
 Kill Tasks              taskkill /F /IM <progname>
-List Installed Software wmic PRODUCT
-Local Security Settings secpol.msc
-Local Users & Groups    lusrmgr.msc
 Log off User            logoff
-Magnifier               Magnify.exe
-Malicious Sftwr Remov   mrt.exe
+Magnifier               magnify.exe
 Memory Test             mdsched.exe
 Memory Usage            mem
 Microsoft Exchange      control mlcfg32.cpl
 Microsoft Mail          control wgpocpl.cpl
-Microsoft Mgmt Console  mmc
-Modem Properties        control modem.cpl
 MSConfig [A]            msconfig.exe
-Mouse                   main.cpl  |  control mouse
-Network Connections     control netconnections  |  ncpa.cpl
 Network Info            ipconfig | tracert | ping | pathping | arp -a | netstat | nslookup
-Network Properties      netcpl.cpl
-Network Resources       net
-Network Setup Wzrd      netsetup.cpl | control netcpl.cpl 
 Notepad                 notepad.exe
 Onscreen Keyboard       osk.exe
-Open File List          openfiles
-Optional Features [A]   optionalfeatures.exe
-Password Properties     password.cpl | control password.cpl
-Performance Monitor     permon.exe  |  perfmon.msc
-Permissions of files    cacls  |  subinacl
-Power                   powercfg.exe -l | powercfg.cpl | control powercfg.cpl | control main.cpl power
-Printers & Faxes        control printers | printers | shell:PrintersFolder
+Open File List          openfiles.exe
 Print queue             lpq
-Programs and Features   control /name Microsoft.ProgramsAndFeatures
-Programs (add/rem)      appwiz.cpl
-RAM Memory              Computer > System Properties
-RAM Memory              wmic memphysical get MaxCapacity /format:list
-Regional Settings       cntrol intl.cpl
-Registry Editor         regedit | regedit32
-Removable Storage       ntmsmgr.msc
-Resource Monitor [A]    perfmon.exe /res
-Scanners & Cameras      sticpl.cpl | control sticpl.cpl
-Scheduled Tasks         control schedtasks | schtasks /?
-Security Center         wscui.cpl
-Services                services.msc | srvmgr.cpl
-SFC Scan                sfc [ /verifyonly | /scannow ]
-Show Drives             wmic logicaldisk get filesystem,caption,drivetype,size,freespace,name,volumename
 Shut Down               shutdown  |  psshutdown
 Storage                 Settings > System > Storage > Storage sense => Configure Storage Sense > clean now
-Sounds & Audio          mmsys.cpl
-System Configuration    sysedit | msconfig
-Sys Prop Protection [A] SystemPropertiesProtection.exe
 System Info             msinfo32.exe
-System Properties [A]   sysdm.cpl | control sysdm.cpl
-System Restore          rstrui.exe
-Task List               tasklist | more
+Task List               tasklist.exe | more
 Task Manager            taskmgr.exe
-Task Schedular          taskschd.msc
-Time and Date           timedate.cpl | control timedate.cpl
-Users Accounts [A]      netplwiz.exe
-User Account Mgr        nusrmgr.cpl
-Usernames & Passwords   cmdkey
-Utility Manager         utilman.exe
-Windows Installer       msiexec
-Windows Version         ver | winver.exe  |  wmic os get version
-Windows Update          control update  |  ms-settings:windowsupdate
 Wordpad                 "%ProgramFiles%\Windows NT\Accessories\wordpad.exe"
-
-======================================================================
-URI (Uniform Resource Identifier) commands
-
-Settings main page              ms-settings:
-----------------------------------------------------------------------
-System
-----------------------------------------------------------------------
-Display                         ms-settings:display
-Display -> Night light settings ms-settings:nightlight
-Sound                           ms-settings:sound
-Notifications & actions         ms-settings:notifications
-Focus Assist                    ms-settings:quiethours
-Power & sleep                   ms-settings:powersleep
-Battery                         ms-settings:batterysaver
-Batt -> Battery usage by app    ms-settings:batterysaver-usagedetails
-Batt -> Battery saver settings  ms-settings:batterysaver-settings
-Storage                         ms-settings:storagesense
-St -> Change where save content ms-settings:savelocations
-St -> Change to free up space   ms-settings:storagepolicies
-Tablet mode                     ms-settings:tabletmode
-Multitasking                    ms-settings:multitasking
-Projecting to this PC           ms-settings:project
-Shared experiences              ms-settings:crossdevice
-Clipboard                       ms-settings:clipboard
-Remote Desktop                  ms-settings:remotedesktop
-About                           ms-settings:about
-----------------------------------------------------------------------
-Devices
-----------------------------------------------------------------------
-Bluetooth & other devices       ms-settings:bluetooth
-Printers & scanners             ms-settings:printers
-Mouse                           ms-settings:mousetouchpad
-Touchpad                        ms-settings:devices-touchpad
-Typing                          ms-settings:typing
-Pen & Windows Ink               ms-settings:pen
-AutoPlay                        ms-settings:autoplay
-USB                             ms-settings:usb
-----------------------------------------------------------------------
-Phone
-----------------------------------------------------------------------
-Phone                           ms-settings:mobile-devices
-----------------------------------------------------------------------
-Network & Internet      
-----------------------------------------------------------------------
-Status                          ms-settings:network-status
-Cellular & SIM                  ms-settings:network-cellular
-Wi-Fi                           ms-settings:network-wifi
-Wi-Fi -> Manage known networks  ms-settings:network-wifisettings
-Wi-Fi calling                   ms-settings:network-wificalling
-Ethernet                        ms-settings:network-ethernet
-Dial-up                         ms-settings:network-dialup
-VPN                             ms-settings:network-vpn
-Airplane mode                   ms-settings:network-airplanemode
-Mobile hotspot                  ms-settings:network-mobilehotspot
-Data usage                      ms-settings:datausage
-Proxy                           ms-settings:network-proxy
-----------------------------------------------------------------------
-Personalization         
-----------------------------------------------------------------------
-Background                      ms-settings:personalization-background
-Colors                          ms-settings:colors
-Lock screen                     ms-settings:lockscreen
-Themes                          ms-settings:themes
-Fonts                           ms-settings:fonts
-Start                           ms-settings:personalization-start
-Taskbar                         ms-settings:taskbar
-----------------------------------------------------------------------
-Apps
-----------------------------------------------------------------------
-Apps & features                 ms-settings:appsfeatures
-A&f -> Manage optional features ms-settings:optionalfeatures
-Default apps                    ms-settings:defaultapps
-Offline maps                    ms-settings:maps
-Apps for websites               ms-settings:appsforwebsites
-Video playback                  ms-settings:videoplayback
-Startup                         ms-settings:startupapps
-----------------------------------------------------------------------
-Accounts
-----------------------------------------------------------------------
-Your info                       ms-settings:yourinfo
-Email & app accounts            ms-settings:emailandaccounts
-Sign-in options                 ms-settings:signinoptions
-Access work or school           ms-settings:workplace
-Family & other people           ms-settings:otherusers
-Sync your settings              ms-settings:sync
-----------------------------------------------------------------------
-Time & language
-----------------------------------------------------------------------
-Date & time                     ms-settings:dateandtime
-Region & language               ms-settings:regionlanguage
-Speech                          ms-settings:speech
-----------------------------------------------------------------------
-Gaming
-----------------------------------------------------------------------
-Game bar                        ms-settings:gaming-gamebar
-Game DVR                        ms-settings:gaming-gamedvr
-Broadcasting                    ms-settings:gaming-broadcasting
-Game Mode                       ms-settings:gaming-gamemode
-TruePlay                        ms-settings:gaming-trueplay
-Xbox Networking                 ms-settings:gaming-xboxnetworking
-----------------------------------------------------------------------
-Ease of Access
-----------------------------------------------------------------------
-Display                         ms-settings:easeofaccess-display
-Magnifier                       ms-settings:easeofaccess-magnifier
-Color filters                   ms-settings:easeofaccess-colorfilter
-High contrast                   ms-settings:easeofaccess-highcontrast
-Narrator                        ms-settings:easeofaccess-narrator
-Audio                           ms-settings:easeofaccess-audio
-Closed captions                 ms-settings:easeofaccess-closedcaptioning
-Speech                          ms-settings:easeofaccess-speechrecognition
-Keyboard                        ms-settings:easeofaccess-keyboard
-Mouse                           ms-settings:easeofaccess-mouse
-Eye control                     ms-settings:easeofaccess-eyegaze
-Other options                   ms-settings:easeofaccess-otheroptions
-----------------------------------------------------------------------
-Cortana         
-----------------------------------------------------------------------
-Talk to Cortana                 ms-settings:cortana
-Permissions & history           ms-settings:cortana-permissions
-Notifications                   ms-settings:cortana-notifications
-More details                    ms-settings:cortana-moredetails
-----------------------------------------------------------------------
-Privacy         
-----------------------------------------------------------------------
-General                         ms-settings:privacy-general
-Speech, inking, & typing        ms-settings:privacy-speechtyping
-Diagnostics & feedback          ms-settings:privacy-feedback
-Activity History                ms-settings:privacy-activityhistory
-Location                        ms-settings:privacy-location
-Camera                          ms-settings:privacy-webcam
-Microphone                      ms-settings:privacy-microphone
-Notifications                   ms-settings:privacy-notifications
-Account info                    ms-settings:privacy-accountinfo
-Contacts                        ms-settings:privacy-contacts
-Calendar                        ms-settings:privacy-calendar
-Call history                    ms-settings:privacy-callhistory
-Email                           ms-settings:privacy-email
-Tasks                           ms-settings:privacy-tasks
-Messaging                       ms-settings:privacy-messaging
-Radios                          ms-settings:privacy-radios
-Other devices                   ms-settings:privacy-customdevices
-Background apps                 ms-settings:privacy-backgroundapps
-App diagnostics                 ms-settings:privacy-appdiagnostics
-Automatic file downloads        ms-settings:privacy-automaticfiledownloads
-Documents                       ms-settings:privacy-documents
-Pictures                        ms-settings:privacy-pictures
-Videos                          ms-settings:privacy-videos
-File system                     ms-settings:privacy-broadfilesystemaccess
-----------------------------------------------------------------------
-Update & security       
-----------------------------------------------------------------------
-Windows Update                  ms-settings:windowsupdate
-WU -> Check for updates         ms-settings:windowsupdate-action
-WU -> Update history            ms-settings:windowsupdate-history
-WU -> Restart options           ms-settings:windowsupdate-restartoptions
-WU -> Advanced options          ms-settings:windowsupdate-options
-Windows Security / Defender     ms-settings:windowsdefender
-Backup                          ms-settings:backup
-Troubleshoot                    ms-settings:troubleshoot
-Recovery                        ms-settings:recovery
-Activation                      ms-settings:activation
-Find My Device                  ms-settings:findmydevice
-For developers                  ms-settings:developers
-Windows Insider Program         ms-settings:windowsinsider
-----------------------------------------------------------------------
-Mixed reality   
-----------------------------------------------------------------------
-Audio and speech                ms-settings:holographic-audio
-
-======================================================================
-Hotkeys voor Windows
-
-Hotkey [Win]            Start
-Hotkey [Win+E]          File Explorer
-Hotkey [Win+I]          Settings
-Hotkey [Win+R]          Run Dialog Box
-Hotkey [Win+L]          Lock Screen
-Hotkey [Win+S]          Search
-Hotkey [Win+Tab]        Task View
-Hotkey [Win+A]          Action Center
-Hotkey [Win+X]          Start Context Menu (Taakbeheer)
-Hotkey [Ctrl+Shift+Esc] Task Manager
-Hotkey [Win+Pause]      Control Panel
-Hotkey [Win+U]          Ease of Access
-Hotkey [Qin+V]          Clipboard
-HotKey [Win+Break]      System Properties
-Hotkey [Win+Pause+Break]Perfoemance
-Hotkey [Win+Shift+S]    Screenshot
-Hotkey [Alt+Cmd+Esc]    Close App
-Hotkey [Win+=]          Magnefier
-Hotkey [Alt+F4]         Afsluiten (na [Win+D]: focus bureaublad)
-
-======================================================================
-Directories voor Windows
-
-Dir: SendTo             shell:SendTo  |  C:\Users\piet\AppData\Roaming\Microsoft\Windows\SendTo
-Dir: Startup            shell:Common Startup
-Dir: Start              shell:Common Start Menu
-Dir: Cookies            shell:Cookies
-Dir: History            shell:History
-Dir: Screenshots        shell:Screenshots
-Dir: System             shell:System
-
-======================================================================
-Websites
-
-Web: commands           https://www.webnots.com/200-run-commands-for-windows-10/
-Web: commands           https://www.windows-commandline.com/cmd-commands/
-Web: cpl-applets        https://www.itechtics.com/control-panel-applets-cpl/
-Web: msc-files          https://www.itechtics.com/msc-files/
-Web: Settings           https://ss64.com/nt/syntax-settings.html
-Web: Tools              https://learn.microsoft.com/en-us/sysinternals/
-Web: Documentation      https://learn.microsoft.com/en-us/docs/
-Web: Information        https://www.askvg.com/
-Web: Information        https://www.thewindowsclub.com/
-Web: Information        https://www.makeuseof.com/
+Wordpad                 write.exe
 
 ======================================================================
 ######################################################################
