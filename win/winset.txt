@@ -20,10 +20,10 @@ Alltasks  [ C:\Windows\explorer.exe shell:::{ED7BA470-8E54-465E-825C-99712043E01
 
 Settings                                     [ms-settings:]
 Systeem
-    (apparaatbeheer)                                                     [(control) hdwwiz.cpl]
+    (apparaatbeheer)                                                         [(control) hdwwiz.cpl]
 	(Intel Graphics Control)                                             [(control) igfxCPL.cpl]
 	Beeldscherm                          [ms-settings:display]           [(control) desk.cpl][control desktop]
-		Nachtverlichting                 [ms-settings:nightlight]
+	    Nachtverlichting                 [ms-settings:nightlight]
 	Geluid                               [ms-settings:sound]             [(control) mmsys.cpl]
 	(Realtek)                                                            [(control) RTSnMg64.cpl]
 	Meldingen en acties                  [ms-settings:notifications]
@@ -31,8 +31,8 @@ Systeem
 	Energiebeheer en slaapstand          [ms-settings:powersleep]        [(control) powercfg.cpl]
 	Batterij                             [ms-settings:batterysaver]
 	Opslag                               [ms-settings:storagesense]
-		Opslag Locatie                   [ms-settings:savelocations]
-		Ruimte vrijmaken                 [ms-settings:storagepolicies]
+	    Opslag Locatie                   [ms-settings:savelocations]
+	    Ruimte vrijmaken                 [ms-settings:storagepolicies]
 	Tablet                               [ms-settings:tabletmode]
 	Multitasking                         [ms-settings:multitasking]
 	Op deze pc projecteren               [ms-settings:project]
@@ -55,13 +55,13 @@ Telefoon
 	Telefoon                             [ms-settings:mobile-devises]    [(control) telephon.cpl][control modem]
 ----------------------------------------------------------------------
 Netwerk en internet
-    (Adapter opties)                                                     [(control) ncpa.cpl][control netconnections]
+    (Adapter opties)                                                         [(control) ncpa.cpl][control netconnections]
 	(Eigenschappen van Internet)                                         [(control) inetcpl.cpl]
 	Status                               [ms-settings:network-status]
 	(Cel en SIM)                         [ms-settings:network-cellular]
 	Wi-Fi                                [ms-settings:network-wifi]
-		Manage known networks            [ms-settings:network-wifisettings]
-		Calling                          [ms-settings:network-wificalling]
+	    Manage known networks            [ms-settings:network-wifisettings]
+	    Calling                          [ms-settings:network-wificalling]
 	Ethernet                             [ms-settings:network-ethernet]
 	Inbelverbindingen                    [ms-settings:network-dialup]
 	VPN                                  [ms-settings:network-vpn]
@@ -81,7 +81,7 @@ Persoonlijke instellingen
 ----------------------------------------------------------------------
 Apps
 	Apps en onderdelen                   [ms-settings:appsfeatures]      [(control) appwiz.cpl][control /name Microsoft.ProgramsAndFeatures]
-		Optional Features                [ms-settings:optionalfeatures]
+	    Optional Features                [ms-settings:optionalfeatures]
 	Standaard-apps                       [ms-settings:defaultapps]
 	Offlinekaarten                       [ms-settings:maps]
 	Apps voor websites                   [ms-settings:appsforwebsites]
@@ -89,7 +89,7 @@ Apps
 	Opstarten                            [ms-settings:startupapps]
 ----------------------------------------------------------------------
 Accounts
-    (Gebruikrsaccountbeheer)                                             [(control) sysdm.cpl]
+    (Gebruikrsaccountbeheer)                                                 [(control) sysdm.cpl]
 	Uw info                              [ms-settings:yourinfo]
 	Email en accounts                    [ms-settings:emailandaccounts]
 	Aanmeldingsopties                    [ms-settings:signinoptions]
@@ -104,29 +104,29 @@ Tijd en taal
 	Spraak                               [ms-settings:speech]
 ----------------------------------------------------------------------
 Gaming
-    (Spelbesturing)                                                      [(control) joy.cpl]
-	Game Bar                             [ms-settings:gaming-gamebar]
+    (Spelbesturing)                                                          [(control) joy.cpl]
+        Game Bar                             [ms-settings:gaming-gamebar]
 	Opnames                              [ms-settings:]
 	Gamemodus                            [ms-settings:gaming-gamemode]
 ----------------------------------------------------------------------
 Toegankelijkheid
 	Gezichtsvemogen
-		Beeldscherm                      [ms-settings:easeofaccess-display]
-		Muisaanwijzer                                                    
-		Tekstcursor
-		Vergrootglas                     [ms-settings:easeofaccess-magnifier]
-		Kleurfilters                     [ms-settings:easeofaccess-colorfilter]
-		Hoog contrast                    [ms-settings:easeofaccess-highcontrast]
-		Verteller                        [ms-settings:easeofaccess-narrator]
+	    Beeldscherm                      [ms-settings:easeofaccess-display]
+	    Muisaanwijzer                                                    
+	    Tekstcursor
+	    Vergrootglas                     [ms-settings:easeofaccess-magnifier]
+	    Kleurfilters                     [ms-settings:easeofaccess-colorfilter]
+	    Hoog contrast                    [ms-settings:easeofaccess-highcontrast]
+	    Verteller                        [ms-settings:easeofaccess-narrator]
 	Gehoor
-		Audio                            [ms-settings:easeofaccess-audio]
-		Ondertiteling                    [ms-settings:easeofaccess-closedcaptioning]
+	    Audio                            [ms-settings:easeofaccess-audio]
+	    Ondertiteling                    [ms-settings:easeofaccess-closedcaptioning]
 	Interactie
-		Spraak                           [ms-settings:easeofaccess-speechrecognition]
-		Toetsenbord                      [ms-settings:easeofaccess-keyboard]
-		Muis                             [ms-settings:easeofaccess-mouse]
-		Ogenbediening                    [ms-settings:easeofaccess-eyegaze]
-		(Andere opties)                  [ms-settings:easeofaccess-otheroptions]
+	    Spraak                           [ms-settings:easeofaccess-speechrecognition]
+	    Toetsenbord                      [ms-settings:easeofaccess-keyboard]
+	    Muis                             [ms-settings:easeofaccess-mouse]
+	    Ogenbediening                    [ms-settings:easeofaccess-eyegaze]
+	    (Andere opties)                  [ms-settings:easeofaccess-otheroptions]
 ----------------------------------------------------------------------
 Zoeken
 	Machtigingen en geschiedenis
@@ -134,43 +134,43 @@ Zoeken
 ----------------------------------------------------------------------
 Privacy
 	Windows-machtigingen
-		Algemeen                         [ms-settings:privacy-general]
-		Spraak                           [ms-settings:privacy-speechtyping]
-		Pers. inst. handschrift en typen [ms-settings:privacy-speechtyping]
-		Diagnostische gegevens&feedback  [ms-settings:privacy-feedback]
-		Activiteitengeschiedenis         [ms-settings:privacy-activityhistory]
+	    Algemeen                         [ms-settings:privacy-general]
+	    Spraak                           [ms-settings:privacy-speechtyping]
+	    Pers. inst. handschrift en typen [ms-settings:privacy-speechtyping]
+	    Diagnostische gegevens&feedback  [ms-settings:privacy-feedback]
+	    Activiteitengeschiedenis         [ms-settings:privacy-activityhistory]
 	App-machtigingen
-		Locatie                          [ms-settings:privacy-location]
-		Camera                           [ms-settings:privacy-webcam]
-		Microfoon                        [ms-settings:privacy-microphone]
-		Stemactivering                   
-		Meldingen                        [ms-settings:privacy-notifications]
-		Accountgegevens                  [ms-settings:privacy-accountinfo]
-		Contactpersonen                  [ms-settings:privacy-contacts]
-		Agenda                           [ms-settings:privacy-calendar]
-		Telefoongesprekken               
-		Oproepgeschiedenis               [ms-settings:privacy-callhistory]
-		E-mail                           [ms-settings:privacy-email]
-		Taken                            [ms-settings:privacy-tasks]
-		Berichten                        [ms-settings:privacy-messaging]
-		Radio's                          [ms-settings:privacy-radios]
-		Overige apparaten                [ms-settings:privacy-customdevices]
-		Achtergrond-apps                 [ms-settings:privacy-backgroundapps]
-		Diagnostiek van app              [ms-settings:privacy-ppdiagnostics]
-		Automatische betandsdownloads    [ms-settings:privacy-automaticfiledownloads]
-		Documenten                       [ms-settings:privacy-documents]
-		Afbeeldingen                     [ms-settings:privacy-pictures]
-		Video's                          [ms-settings:privacy-videos]
-		Bestandssysteem                  [ms-settings:privacy-broadfilesystemaccess]
+	    Locatie                          [ms-settings:privacy-location]
+	    Camera                           [ms-settings:privacy-webcam]
+	    Microfoon                        [ms-settings:privacy-microphone]
+	    Stemactivering                   
+	    Meldingen                        [ms-settings:privacy-notifications]
+	    Accountgegevens                  [ms-settings:privacy-accountinfo]
+	    Contactpersonen                  [ms-settings:privacy-contacts]
+	    Agenda                           [ms-settings:privacy-calendar]
+	    Telefoongesprekken               
+	    Oproepgeschiedenis               [ms-settings:privacy-callhistory]
+	    E-mail                           [ms-settings:privacy-email]
+	    Taken                            [ms-settings:privacy-tasks]
+	    Berichten                        [ms-settings:privacy-messaging]
+	    Radio's                          [ms-settings:privacy-radios]
+	    Overige apparaten                [ms-settings:privacy-customdevices]
+	    Achtergrond-apps                 [ms-settings:privacy-backgroundapps]
+	    Diagnostiek van app              [ms-settings:privacy-ppdiagnostics]
+	    Automatische betandsdownloads    [ms-settings:privacy-automaticfiledownloads]
+	    Documenten                       [ms-settings:privacy-documents]
+	    Afbeeldingen                     [ms-settings:privacy-pictures]
+	    Video's                          [ms-settings:privacy-videos]
+	    Bestandssysteem                  [ms-settings:privacy-broadfilesystemaccess]
 ----------------------------------------------------------------------
 Bijwerken en beveiliging
-    (Firewall)                                                           [(control) firewall.cpl]
-	(Beveiliging en onderhoud)                                           [(control) wscui.cpl]
+    (Firewall)                                                               [(control) firewall.cpl]
+        (Beveiliging en onderhoud)                                           [(control) wscui.cpl]
 	Windows Update                       [ms-settings:windowsupdate      [control update]
-		Check for updates                [ms-settings:windowsupdate-action]
-		Update history                   [ms-settings:windowsupdate-history]
-		Restart options                  [ms-settings:windowsupdate-restartoptions]
-		Advanced options                 [ms-settings:windowsupdate-options]
+	    Check for updates                [ms-settings:windowsupdate-action]
+	    Update history                   [ms-settings:windowsupdate-history]
+	    Restart options                  [ms-settings:windowsupdate-restartoptions]
+	    Advanced options                 [ms-settings:windowsupdate-options]
 	Delivery Optimization                
 	Windows-beveiiging                   [ms-settings:windowsdefender]
 	Back-up                              [ms-settings:backup]
@@ -181,7 +181,7 @@ Bijwerken en beveiliging
 	Voor ontwikkelaars                   [ms-settings:developers]
 ----------------------------------------------------------------------
 Gemengde realiteit                       
-    Audio en stem                        [ms-settings:holographic-audio]
+    Audio en stem                            [ms-settings:holographic-audio]
 
 ======================================================================
 WMIC (Windows Management Instrumentation Command-line)
