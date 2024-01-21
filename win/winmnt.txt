@@ -44,29 +44,60 @@ search box : 'View advanced system settings' > Advanced > Settings > Performance
 
 # Windows Cleanup
 ======================================================================
+==== Measure perormance
+[Win+R] : permon.exe  |  perfmon.msc
+==== Turn off visual effects and animations
+[Win+I] -> Settings > Personalisation > Colors > Transparancy Effects 
+==== Turn off Windows features
+[Win+R] : control.exe -> Control panel > Programs and Features
+==== Clean maager
+[Win+R] : cleanmgr.exe
+Settings > System > Storage > Storage sense > configure s.s. > clean now
+==== Remove temporary files
 Start > Settings > Storage 
         => Temporary Docs -> overzicht tijdelijke bestanden 
         => remove Docs
-
 [Win+r] > 'temp' --> Windows Temp  => remove
 [Win+r] > '%temp%' --> AppData\Local\Temp => remove
 [Win+r] > 'prefetch' --> Prefetch => remove
-
-Start > Settings > Apps > Apps and parts -> apps op computer (
-        => remove apps
-
-<Browser> [Ctrl+Shift+Del]  -->  saved items  (=> remove)
-
-Task Manager > Startup
-
-[Win+r] > msconfig.exe  -->  Startup apps and services
-
+==== Uninstall bloatware and apps
+[Win+I] -> Settings > Apps > Apps and parts -> apps op computer => remove apps
+[Win+I] -> Settings > Installed apps > Apps & features => 'three dots' > Uninstall
+==== Disable unnecessary services
+[Win+R] : services.msc -> services -> stop/disable services
+==== Browser
+[Ctrl+Shift+Del]  -->  saved items  (=> remove)
+go to settings in browser > cleanup cache
+go to settings in browser > disable extensions
+==== Disabl startup apps
+[Win+R] : taskmgr.exe -> Startup => disable apps at startup
+[Win+R] : msconfig.exe ->  Startup apps and services
+==== Disk cleanup
 Start > Computer > Properties > general > disk cleanup
-
+==== Defragmentation
+[Win+R] : services.msc -> services -> start defragmentation service
+[Win+R] : cmd.exe (admin ?) : defrag C: /A /H /U =>
+          Defragment and Optimize Drives
+----
 Start > SEARCH defragment > SELECT DISK > defragment disk
+==== Power settings
+[Win+R] : powercfg.cpl > set high performance
+==== Change virtual memory
+[Win+S] : "View advanced system settings"
+-> Performance section > Settings 
+-> Performance Options > Advanced
+-> Virtual memory > Change
+uncheck Automatically manage ....
+Custum size -> 1.5 a 3 x physical memory
+==== Malware scan
+[Win+S] : "Windows Security"
+ OR
+[Win+I] -> System Settings > Update & Security 
+ OR
+[Win+R] : secpol.msc
 
-Settings > System > Storage > Storage sense > configure s.s. > clean now
-
+=> Windows Security > Virus & threat protection
+=> Quick scan
 ----------------------------------------------------------------------
 
 # Maintenance
@@ -383,4 +414,25 @@ Past Wifi:
 == Restart with Advanced Options
 ----------------------------------------------------------------------
 
+# Clean-after-me
+======================================================================
+toetsenbord NLD
+alles verwijderen uit 'snelle toegang': Verkenner > Beeld > Opties
+prullenbak leegmaken
+clipboard
+
+office apps : recently opened'
+windows media player: recently opened
+Settings > Privacy  > Activity History
+Settings > Network & Internet > Data Usage > Opnieuw instellen
+Taakbeheer > App history > erwijderen
+Start search : clean
+Settings > System > Storage > Temporary files > delete
+cleanmgr
+%temp%
+Chrome : [Ctrl+Sift+Del]
+Edge : Instellingen > Privacy
+eventvwr -> event logs
+clipboard : [Win+V]
+----------------------------------------------------------------------
 ######################################################################
