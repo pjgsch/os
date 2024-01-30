@@ -129,7 +129,7 @@ Toegankelijkheid
 	    (Andere opties)                  [ms-settings:easeofaccess-otheroptions]
 ----------------------------------------------------------------------
 Zoeken
-	Machtigingen en geschiedenis
+	Machtigingen en geschiedenis         [ms-settings:search-permissions]
 	Zoeken in Windows
 ----------------------------------------------------------------------
 Privacy
@@ -241,6 +241,7 @@ Executables.
 
 [ dir %windir%\system32\*.exe ]
 [ https://ss64.com/nt/ ]
+[ https://4sysops.com/wiki/list-of-ms-settings-uri-commands-to-open-specific-settings-in-windows-10/ ]
 
 Backup and restore      sdclt.exe | control.exe /name Microsoft.BackupAndRestore
 Bluetooth               fsquirt.exe
