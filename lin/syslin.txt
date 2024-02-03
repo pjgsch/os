@@ -1,4 +1,14 @@
 ######################################################################
+Wifi passwords:
+nmcli device wifi list
+nmcli -s -g 802-11-wireless-security.psk connection show <WiFi_Network_Name>
+sudo grep -r '^psk=' /etc/NetworkManager/system-connections/
+======================================================================
+Hotspot:
+ls /etc/NetworkManager/system-connections  ->  vi ...
+sudo nmcli device wifi hotspot con-name HOTSPOT ssid HOTSPOT band bg password Abcd1234!
+OF
+nm-connection-editor
 ======================================================================
 ls -al /etc/grub.d
 more /etc/default/grub
