@@ -385,12 +385,22 @@ Past Wifi:
 
 # Hotspot
 ======================================================================
+Windows 7:
 == netsh wlan set hostednetwork mode=allow ssid="hallo" key="abcd1234!"
 == Network and Sharing > Change adapter settings > rightclic Internet device > Properties\Sharing
    => "Allow other network users to connect through ..."
 
 == netsh wlan start hostednetwork
 == netsh wlan stop hostednetwork
+----------------------------------------------------------------------
+Windows 10/11:
+== netsh wlan show drivers
+== devmgmt.msc: show hidden devices
+== devmgmt.msc: allow network device(s) to save power
+
+== ncpa.cpl => adapters
+== Adapter : Microsoft Wi-fi Direct Virtual Adapter #2 : Niet delen
+== Adapter : Wi-Fi (Intel Dual Band Wireless) : deze delen met 'Hotspot'
 ----------------------------------------------------------------------
 
 # Software
@@ -435,4 +445,11 @@ Edge : Instellingen > Privacy
 eventvwr -> event logs
 clipboard : [Win+V]
 ----------------------------------------------------------------------
+
+# Backup
+======================================================================
+robocopy c:\users\ellen\documents f:\mybackup\documents /copyall /e /r:0 /dcopy:t /mir
+xcopy c:\users\ellen\documents f:\mybackup\documents /c /d /e /h /i /k /q /r /s /x /y
+----------------------------------------------------------------------
+
 ######################################################################
