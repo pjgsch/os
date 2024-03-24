@@ -342,6 +342,11 @@ Hotkey [Alt+Cmd+Esc]            Close App
 Hotkey [Alt+F4]                 Afsluiten (na [Win+D]: focus bureaublad)
 Hotkey [F11]                    Maximize screen
 
+Browser
+Hotkey [Ctrl+Tab]               Next tabblad
+Hotkey [Shift+Ctrl+A]           List all tabblads (Chrome)
+Hotkey [Ctrl_W]                 Close tabblad
+Hotkey [Alt+<>]                 Page left/right
 ======================================================================
 Directories
 
